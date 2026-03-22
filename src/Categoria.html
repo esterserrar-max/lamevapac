@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html lang="ca">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>Sobre Nosaltres</title>
-        <link rel="icon" type="image/png" href="img/logoLI.png">
-        <meta name="description" content="Pàgina Home del restaurant Little Italy">
-        
-        <link rel="stylesheet" href="style.scss">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sobre Nosaltres</title>
+    <link rel="icon" type="image/png" href="img/logoLI.png">
+    <meta name="description" content="Pàgina Home del restaurant Little Italy">
+
+    <link rel="stylesheet" href="style.scss">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
     <header>
         <nav class="menu-principal" aria-label="Navegació principal">
             <a href="index.html">
-                <img src="img/logoLI.png" alt="Logo del restaurant Litlle Italy" class="img-menu-principal">
+                <img src="img/logoLI.png" alt="Logo del restaurant Little Italy" class="img-menu-principal">
             </a>
-            <ul class="enllaços-menu-principal">
+
+           <button class="hamburguesa" aria-label="Mostra el menú"> &#9776;</button>
+           <ul id="myLinks" class="enllaços-menu-principal">
                 <li><a href="Categoria.html">Sobre Nosaltres</a></li>
                 <li><a href="Detail1.html">La Carta</a></li>
                 <li><a href="Detail2.html">Blog</a></li>
@@ -28,89 +33,98 @@
             </ul>
         </nav>
     </header>
-    
+
     <main class="font">
-        
-        
+
+
         <div class="img-fons"></div>
 
         <h1 class="titol-nosaltres">Sobre Nosaltres</h1>
         <hr>
 
         <section class="presentacio">
-        <h2>Qui som?</h2>
-        <p>El Little Italy som un restaurant d'estil de cuina tradicional italiana. La nostra especialitat són les pizzes d'estil napolità. Els nostres vesavis van obrir el restaurant "La nostra Pizza" a l'any 1950 a la ciutat de Nàpols. La cuina la portaven les dones de la nostra família, les quals seguien les receptes familiars cautelosament. L'any 1990 vam decidir obrir una nova pizzeria a la ciutat de Barcelona. Part de la nostra familia volia viure i compartir la seva tradició culinària a Barcelona. En aquest nou restaurant es va decidir de preservar la recepta tradicional de la massa de les pizzes però obrint la ment per crear pizzes amb productes tradicionals catalans. Des d'ençà que ens preocupem per aconseguir el millor producte local i tradicional dels voltants de Barcelona, i ara també a Nàpols. Creiem que així ajudarem al planeta a no produir més contaminació i ajudar als productors locals.</p>
-        
+            <h2>Qui som?</h2>
+            <p>El Little Italy som un restaurant d'estil de cuina tradicional italiana. La nostra especialitat són les
+                pizzes d'estil napolità. Els nostres vesavis van obrir el restaurant "La nostra Pizza" a l'any 1950 a la
+                ciutat de Nàpols. La cuina la portaven les dones de la nostra família, les quals seguien les receptes
+                familiars cautelosament. L'any 1990 vam decidir obrir una nova pizzeria a la ciutat de Barcelona. Part
+                de la nostra familia volia viure i compartir la seva tradició culinària a Barcelona. En aquest nou
+                restaurant es va decidir de preservar la recepta tradicional de la massa de les pizzes però obrint la
+                ment per crear pizzes amb productes tradicionals catalans. Des d'ençà que ens preocupem per aconseguir
+                el millor producte local i tradicional dels voltants de Barcelona, i ara també a Nàpols. Creiem que així
+                ajudarem al planeta a no produir més contaminació i ajudar als productors locals.</p>
 
-        <div class="img">
-            <figure>
-                <img class="img-nosaltres" src="img/napoli.jpg" alt="Castel dell’Ovo a Nàpols">
-                <figcaption class="comentari-img">Castel dell'Ovo, Nàpols.</figcaption>
-            </figure>
-            
-        </div>
+
+            <div class="img">
+                <figure>
+                    <img class="img-nosaltres" src="img/napoli.jpg" alt="Castel dell’Ovo a Nàpols">
+                    <figcaption class="comentari-img">Castel dell'Ovo, Nàpols.</figcaption>
+                </figure>
+
+            </div>
         </section>
 
         <hr>
 
-        <section class="serveis">
-        <h2>Serveis que oferim</h2>
-        <p>Al Little Italy oferim servei de restaurant, per emportar i a domicili. Per les comandes a domicili cobrarem 2€ per viatge.</p>
-        <p><a href="Detail1.html"><b>Aquí</b></a> podeu fer un cop d'ull a la nostra carta.</p>
+        <section id="portes" class="serveis">
+            <h2>Serveis que oferim</h2>
+            <p>Al Little Italy oferim servei de restaurant, per emportar i a domicili. Per les comandes a domicili
+                cobrarem 2€ per viatge.</p>
+            <p><a href="Detail1.html"><b>Aquí</b></a> podeu fer un cop d'ull a la nostra carta.</p>
 
-        <div class="img">
-            <figure>
-                <img class="img-nosaltres" src="img/vespa.jpg" alt="Motos de la marca italiana Vespa">
-                <figcaption class="comentari-img">Motos de la iconònica marca italiana Vespa</figcaption>
-            </figure>
-        </div>
+            <div class="img">
+                <figure>
+                    <img class="img-nosaltres" src="img/vespa.jpg" alt="Motos de la marca italiana Vespa">
+                    <figcaption class="comentari-img">Motos de la iconònica marca italiana Vespa</figcaption>
+                </figure>
+            </div>
 
         </section>
 
         <hr>
 
-        <section class="horari"> 
-        <h2>El nostre horari</h2>
-        <p>Estem oberts tots els dies de l'any excepte festius.</p>
-        <ul>
-            <li>Horari:
-                <ul>
-                    <li>Dimarts a Diumenge</li>
-                    <li>Migdies: 12.00h a 16.00h</li>
-                    <li>Vespres: 19.00h a 22.30h</li>
-                </ul>
-            </li>
-        </ul>
-        <div class="img">
+        <section class="horari">
+            <h2>El nostre horari</h2>
+            <p>Estem oberts tots els dies de l'any excepte festius.</p>
+            <ul>
+                <li>Horari:
+                    <ul>
+                        <li>Dimarts a Diumenge</li>
+                        <li>Migdies: 12.00h a 16.00h</li>
+                        <li>Vespres: 19.00h a 22.30h</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="img">
                 <img class="img-nosaltres" src="img/horari.jpg" alt="Castel dell’Ovo a Nàpols">
-        </div>
-            </section>
+            </div>
+        </section>
 
         <hr>
 
         <section id="booking" class="reserves">
-        <h2>Reserves</h2>
-        <p>Per a la reserva de comandes per emportar truqueu al 93 871 69 32 o 610101317.</p>
-        <p>L'horari de trucades és el mateix que l'horari d'obertura.</p>
-        
-        <h3>Per reservar ompliu el següent formulari:</h3>
-        
-        <form id="reservationForm">
-            <div class="fila">
-                <label for="name">Nom i Cognoms</label>
-                <input type="text" id="name" placeholder="Nom" required>
-            </div>
-            
-            <div class="fila">
-                <label for="people">Persones</label>
-                <input type="number" id="people" placeholder="Persones" required min="1">
-            </div>
-        
-                <div class= "enlinia">
+            <h2>Reserves</h2>
+            <p>Per a la reserva de comandes per emportar truqueu al 93 871 69 32 o 610101317.</p>
+            <p>L'horari de trucades és el mateix que l'horari d'obertura.</p>
+
+            <h3>Per reservar ompliu el següent formulari:</h3>
+
+            <form id="reservationForm">
+                <div class="fila">
+                    <label for="name">Nom i Cognoms</label>
+                    <input type="text" id="name" placeholder="Nom" required>
+                </div>
+
+                <div class="fila">
+                    <label for="people">Persones</label>
+                    <input type="number" id="people" placeholder="Persones" required min="1">
+                </div>
+
+                <div class="enlinia">
                     <div class="fila-2">
                         <label for="date">Data</label>
                         <input type="date" id="date" required>
-                    </div>  
+                    </div>
                     <div class="fila-2">
                         <label for="hour">Hora</label>
                         <input type="time" id="hour" required>
@@ -118,103 +132,112 @@
                 </div>
 
                 <button type="submit">Reservar</button>
-                
-        </form>
 
-        <h3 id="confirmationText" style="display:none;">Confirmació de la reserva:</h3>
-        <table id="reservationTable">
-            <thead>
-                <tr>
-                    <th>Nom</th>
-                    <th>Persones</th>
-                    <th>Data</th>
-                    <th>Hora</th>
-                </tr>
-            </thead>
-            <tbody id="reservationTableBody"></tbody>
-        </table>
-        <div class="img">
-            <figure>
-                <img class="img-nosaltres" src="img/exteriorrestaurant.jpg" alt="Terrassa del restaurant">
-                <figcaption class="comentari-img">Terrassa del restaurant a Barcelona</figcaption>
-            </figure>
-        </div>
+            </form>
+
+            <h3 id="confirmationText" style="display:none;">Confirmació de la reserva:</h3>
+            <table id="reservationTable">
+                <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Persones</th>
+                        <th>Data</th>
+                        <th>Hora</th>
+                    </tr>
+                </thead>
+                <tbody id="reservationTableBody"></tbody>
+            </table>
+            <div class="img">
+                <figure>
+                    <img class="img-nosaltres" src="img/exteriorrestaurant.jpg" alt="Terrassa del restaurant">
+                    <figcaption class="comentari-img">Terrassa del restaurant a Barcelona</figcaption>
+                </figure>
+            </div>
         </section>
 
         <hr>
 
         <section class="localització">
-        <h2>On estem?</h2>
-        <p>El nostre local es troba a la següent direcció:</p>
-        <p><a href="https://www.google.com/maps/place/Carrer+dels+Banys,+56,+08530+La+Garriga,+Barcelona,+Espanya/@41.6821809,2.2834171,17z/data=!3m1!4b1!4m6!3m5!1s0x12a4c5943908aa89:0x35e15d7bbb9f516c!8m2!3d41.6821769!4d2.285992!16s%2Fg%2F11crwzjkvd?entry=ttu&g_ep=EgoyMDI2MDMxMC4wIKXMDSoASAFQAw%3D%3D" target="_blank">Carrer Banys 56, La Garriga (08530, Barcelona)</a> </p>
+            <h2>On estem?</h2>
+            <p>El nostre local es troba a la següent direcció:</p>
+            <p><a href="https://www.google.com/maps/place/Carrer+dels+Banys,+56,+08530+La+Garriga,+Barcelona,+Espanya/@41.6821809,2.2834171,17z/data=!3m1!4b1!4m6!3m5!1s0x12a4c5943908aa89:0x35e15d7bbb9f516c!8m2!3d41.6821769!4d2.285992!16s%2Fg%2F11crwzjkvd?entry=ttu&g_ep=EgoyMDI2MDMxMC4wIKXMDSoASAFQAw%3D%3D"
+                    target="_blank">Carrer Banys 56, La Garriga (08530, Barcelona)</a> </p>
 
 
-        <div class="img">
+            <div class="img">
                 <img class="img-nosaltres" src="img/onsom.jpg" alt="Castel dell’Ovo a Nàpols">
-        </div>
+            </div>
 
         </section>
 
         <hr>
 
         <section class="contacte">
-        <h2>Contacte</h2>
-        <p>Telèfon: 93 871 69 32 o 610101317</p>
-        <p>Correu electrònic: <a href="mailto:exemple@email.com?subject=Consulta&body=Hola,%20voldria%20informació">
-            littleitalyrestaurant@gmail.com
-        </a></p>
+            <h2>Contacte</h2>
+            <p>Telèfon: 93 871 69 32 o 610101317</p>
+            <p>Correu electrònic: <a href="mailto:exemple@email.com?subject=Consulta&body=Hola,%20voldria%20informació">
+                    littleitalyrestaurant@gmail.com
+                </a></p>
 
-        <div class="img">
-                <img class="img-nosaltres" src="img/contacte.jpg" alt="Castel dell’Ovo a Nàpols">        
-        </div>
+            <div class="img">
+                <img class="img-nosaltres" src="img/contacte.jpg" alt="Castel dell’Ovo a Nàpols">
+            </div>
         </section>
 
         <hr>
 
         <section class="consell">
             <h2>Pels clients curiosos</h2>
-            <p>Si mai aneu a Nàpols, us recomenem mirar el següent vídeo. Aquí trobareu diferents llocs on provar menjar tradicional a la ciutat de Nàpols.
-                 No sigueu tímids i pregunteu sobre recomancions d'on menjar, què veure, etc! Us ajudarem amb molt de gust!
+            <p>Si mai aneu a Nàpols, us recomenem mirar el següent vídeo. Aquí trobareu diferents llocs on provar menjar
+                tradicional a la ciutat de Nàpols.
+                No sigueu tímids i pregunteu sobre recomancions d'on menjar, què veure, etc! Us ajudarem amb molt de
+                gust!
             </p>
-           
-            <p>Si us agrada fer receptes, en el <a href="Detail2.html#recepta-mensual"> Blog del Little Italay</a> trobareu receptes mensuals. Les receptes no nomes seran sobre cuina italiana sinó que seran de tot el món.</p>
+
+            <p>Si us agrada fer receptes, en el <a href="Detail2.html#recepta-mensual"> Blog del Little Italay</a>
+                trobareu receptes mensuals. Les receptes no nomes seran sobre cuina italiana sinó que seran de tot el
+                món.</p>
 
             <div class="video">
-                <iframe src="https://www.youtube.com/embed/uTFYGK5nkcs?si=2ImaaCEe3QlAe8lq" title="Punts de menjar tradicions de Nàpols" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/uTFYGK5nkcs?si=2ImaaCEe3QlAe8lq"
+                    title="Punts de menjar tradicions de Nàpols" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </section>
-        
+
 
     </main>
 
     <footer>
         <div class="linia-movil">
-        <nav class="footer-informació" aria-label="Informació del lloc">
-            <p>Nosaltres</p>
-            <ul>
-                <li><a href="Detail1.html">Sobre nosaltres</a></li>
-                <li><a href="Detail1.html">Contacte</a></li>
-            </ul>
-        </nav>
-        <nav class="footer-social" aria-label="Xarxes socials">
-            <p>Xarxes socials</p>
-            <ul>
-                <li><a href="#">Instagram</a></li>
-                <li><a href="#">TikTok</a></li>
-                <li><a href="#">X</a></li>
-            </ul>
-        </nav> 
-        <nav class="footer-legal" aria-label="Legal">
-            <p>Nota legal</p>
-            <ul>
-                <li><a href="#">Política de privacitat</a></li>
-                <li><a href="#">Política de cookies</a></li>
-                <li><a href="#">Avís legal</a></li>
-            </ul>
-        </nav>
+            <nav class="footer-informació" aria-label="Informació del lloc">
+                <p>Nosaltres</p>
+                <ul>
+                    <li><a href="Detail1.html">Sobre nosaltres</a></li>
+                    <li><a href="Detail1.html">Contacte</a></li>
+                </ul>
+            </nav>
+            <nav class="footer-social" aria-label="Xarxes socials">
+                <p>Xarxes socials</p>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">TikTok</a></li>
+                    <li><a href="#">X</a></li>
+                </ul>
+            </nav>
+            <nav class="footer-legal" aria-label="Legal">
+                <p>Nota legal</p>
+                <ul>
+                    <li><a href="#">Política de privacitat</a></li>
+                    <li><a href="#">Política de cookies</a></li>
+                    <li><a href="#">Avís legal</a></li>
+                </ul>
+            </nav>
         </div>
     </footer>
 
     <script type="module" src="app.js"></script>
 </body>
+
 </html>

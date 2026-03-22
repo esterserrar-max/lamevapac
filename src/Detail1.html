@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html lang="ca">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>Carta del restaurant del Little Italy</title>
-        <link rel="icon" type="image/png" href="img/logoLI.png">
-        <meta name="description" content="Carta del restaurant Little Italy">
-        
-        <link rel="stylesheet" href="style.scss">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Carta del restaurant del Little Italy</title>
+    <link rel="icon" type="image/png" href="img/logoLI.png">
+    <meta name="description" content="Carta del restaurant Little Italy">
+
+    <link rel="stylesheet" href="style.scss">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
     <header>
-        <nav class="menu-principal" aria-label="Navegació principal">
+       <nav class="menu-principal" aria-label="Navegació principal">
             <a href="index.html">
-                <img src="img/logoLI.png" alt="Logo del restaurant Litlle Italy" class="img-menu-principal">
+                <img src="img/logoLI.png" alt="Logo del restaurant Little Italy" class="img-menu-principal">
             </a>
-            <ul class="enllaços-menu-principal">
+
+           <button class="hamburguesa" aria-label="Mostra el menú"> &#9776;</button>
+           <ul id="myLinks" class="enllaços-menu-principal">
                 <li><a href="Categoria.html">Sobre Nosaltres</a></li>
                 <li><a href="Detail1.html">La Carta</a></li>
                 <li><a href="Detail2.html">Blog</a></li>
@@ -37,7 +42,7 @@
 
         <section class="informacio">
             <h2>Informació addicional</h2>
-            <p>Per consultar els preus dels portes a domicili consulteu: <a href="Detail1.html">aquí</a></p>
+            <p>Per consultar els preus dels portes a domicili consulteu: <a href="Categoria.html#portes">aquí</a></p>
         </section>
 
         <hr>
@@ -45,404 +50,429 @@
         <h1 class="titol-menu">La Carta</h1>
 
         <div class="carta">
-        <section class="plats-section">
-        <h2>Pizzes</h2>
-        <div class="image-categoria">
-            <figure>
-                <img class="img-carta" src="img/diavola.jpg" alt="Pizza Diavola">
-                <figcaption class="comentari-pizza">Pizza Diavola. Una de les pizzes més destaacades de la carta.</figcaption>
-            </figure>
-        </div>
-        <ul class="plats">
-            <li id="pizza-destacada-0">
-                <div class="plat-titol">
-                Margarita <span class="preu">12,00€</span>
-                </div>
-                <ul class="ingredients">
-                    <li>salsa de tomàquet</li>
-                    <li>mozzarella</li>
-                    <li>albahaca</li>
-                    <li>orenga</li>
-                </ul>
-            </li>
-            <li>
-                <div class="plat-titol">
-                Marinara <span class="preu">12,50€</span>
-                </div>
-                <ul class="ingredients">
-                    <li>salsa de tomàquet</li>
-                    <li>mozzarella</li>
-                    <li>all</li>
-                    <li>oli d'oliva</li>
-                    <li>orenga</li>
-                </ul>
-            </li>
-            <li>
-                <div class="plat-titol">
-                Proscuitto <span class="preu">12,50€</span>
-                </div>
-                <ul class="ingredients">
-                    <li>salsa de tomàquet</li>
-                    <li>mozzarella</li>
-                    <li>pernil dolç</li>
-                    <li>orenga</li>
-                </ul>
-            </li>
-            <li>
-                <div class="plat-titol">
-                Bacó <span class="preu">15,00€</span>
-                </div>
-                <ul class="ingredients">
-                    <li>salsa de tomàquet</li>
-                    <li>mozzarella</li>
-                    <li>bacó</li>
-                </ul>
-            </li>
-            <li id="pizza-destacada1">
-                <div class="plat-titol">
-                Diavola <span class="preu">13,50€</span>
-                </div>
-                <ul class="ingredients">
-                    <li>salsa de tomàquet</li>
-                    <li>mozzarella</li>
-                    <li>xoriço picant</li>
-                    <li>albahaca</li>
-                </ul>
-            </li>
-            <li>
-                <div class="plat-titol">
-                4 estacions <span class="preu">14,00€</span>
-                </div>
-                <ul class="ingredients">
-                    <li>salsa de tomàquet</li>
-                    <li>mozzarella</li>
-                    <li>pernil dolç</li>
-                    <li>escarxofa</li>
-                    <li>xampinyons</li>
-                    <li>orenga</li>
-                </ul>
-            </li>
-            <li>
-                <div class="plat-titol">
-                Capritxosa <span class="preu">14,25€</span>
-                </div>
-                <ul class="ingredients">
-                    <li>salsa de tomàquet</li>
-                    <li>mozzarella</li>
-                    <li>pernil dolç</li>
-                    <li>escarxofa</li>
-                    <li>xampinyons</li>
-                    <li>olives negres</li>
-                    <li>orenga</li>
-                </ul>
-            </li>
-            <li>
-                <div class="plat-titol">
-                La Garriga <span class="preu">14,75€</span>
-                </div>
-                <ul class="ingredients">
-                    <li>salsa de tomàquet</li>
-                    <li>mozzarella</li>
-                    <li>botifarra</li>
-                    <li>gorgonzola</li>
-                    <li>ceba</li>
-                    <li>orenga</li>
-                </ul>
-            </li>
-            <li>
-                <div class="plat-titol">
-                Barbacoa <span class="preu">15,00€</span>
-                </div>
-                <ul class="ingredients">
-                    <li>salsa de tomàquet</li>
-                    <li>mozzarella</li>
-                    <li>bacó</li>
-                    <li>botifarra</li>
-                    <li>salsa barbacoa</li>
-                    <li>orenga</li>
-                </ul>
-            </li>
-            <li>
-                <div class="plat-titol">
-                Gambini <span class="preu">15,35€</span>
-                </div>
-                <ul class="ingredients">
-                    <li>salsa de tomàquet</li>
-                    <li>mozzarella</li>
-                    <li>pernil dolç</li>
-                    <li>gambes</li>
-                    <li>orenga</li>
-                </ul>
-            </li>
-            <li>
-                <div class="plat-titol">
-                Pikachu <span class="preu">15,50€</span>
-                </div>
-                <ul class="ingredients">
-                    <li>salsa de tomàquet</li>
-                    <li>mozzarella</li>
-                    <li>pernil dolç</li>
-                    <li>gambes</li>
-                    <li>nata</li>
-                    <li>orenga</li>
-                </ul>
-            </li>
-            <li>
-                <div class="plat-titol">
-                Vegetariana <span class="preu">14,00€</span>
-                </div>
-                <ul class="ingredients">
-                    <li>salsa de tomàquet</li>
-                    <li>mozzarella</li>
-                    <li>verdures de temporada</li>
-                </ul>
-            </li>
-            <li>
-                <div class="plat-titol">
-                Little Italy <span class="preu">15,50€</span>
-                </div>
-                <ul class="ingredients">
-                    <li>salsa de tomàquet</li>
-                    <li>mozzarella</li>
-                    <li>bacó</li>
-                    <li>mozarella di buffala</li>
-                    <li>ou</li>
-                    <li>orenga</li>
-                </ul>
-            </li>
-            <li>
-                <div class="plat-titol">
-                    Salmó
-                 <span class="preu">15,50€</span>
-                </div>
-                <ul class="ingredients">
-                    <li>salsa de tomàquet</li>
-                    <li>mozzarella</li>
-                    <li>salmó</li>
-                    <li>orenga</li>
-                </ul>
-            </li>
-            <li>
-                <div class="plat-titol">
-                Deliciosa <span class="preu">15,90€</span>
-                </div>
-                <ul class="ingredients">
-                    <li>salsa de tomàquet</li>
-                    <li>mozzarella</li>
-                    <li>espinacs</li>
-                    <li>porcini</li>
-                    <li>ricotta</li>
-                    <li>orenga</li>
-                </ul>
-            </li>
-            <li>
-                <div class="plat-titol">
-                Primavera <span class="preu">15,95€</span>
-                </div>
-                <ul class="ingredients">
-                    <li>salsa de tomàquet</li>
-                    <li>mozzarella</li>
-                    <li>esparrecs</li>
-                    <li>tomàquets cherries</li>
-                    <li>pernil ibèric</li>
-                    <li>orenga</li>
-                </ul>
-            </li>
-            <li id="pizza-destacada3">
-                <div class="plat-titol">
-                Montserrat <span class="preu">16,00€</span>
-                </div>
-                <ul class="ingredients">
-                    <li>salsa de tomàquet</li>
-                    <li>mozzarella</li>
-                    <li>botifarra negra</li>
-                    <li>pebrot vermell</li>
-                    <li>ceba</li>
-                    <li>orenga</li>
-                </ul>
-            </li>
-        </ul>
-        
-        <h2>Pizzes blanques</h2>
-        <div class="image-categoria">
-            <figure>
-                <img class="img-carta" src="img/pizza-blanca.jpg" alt="Pizza blanca">
-                <figcaption class="comentari-pizza">Pizza Quatre formatges.</figcaption>
-            </figure>
-        </div>
-        <ul class="plats">
-            <li>
-                <div class="plat-titol">
-                Quatre Formatges <span class="preu">14,00€</span>
-                </div>
-                <ul class="ingredients">
-                    <li>mozzarella</li>
-                    <li>emmental</li>
-                    <li>gorgonzola</li>
-                    <li>permesà</li>
-                    <li>orenga</li>
-                </ul>
-            </li>
-            <li>
-                <div class="plat-titol">
-                Cinc Formatges <span class="preu">14,00€</span>
-                </div>
-                <ul class="ingredients">
-                    <li>mozzarella</li>
-                    <li>emmental</li>
-                    <li>gorgonzola</li>
-                    <li>permesà</li>
-                    <li>cabra</li>
-                    <li>orenga</li>
-                </ul>
-            </li>
-            <li>
-                <div class="plat-titol">
-                Carbonara <span class="preu">15,00€</span>
-                </div>
-                <ul class="ingredients">
-                    <li>mozzarella</li>
-                    <li>pernil dolç</li>
-                    <li>bacó</li>
-                    <li>ceba</li>
-                    <li>nata</li>
-                    <li>orenga</li>
-                </ul>
-            </li>
-            <li id="pizza-destacada2">
-                <div class="plat-titol">
-                Cabra <span class="preu">15,50€</span>
-                </div>
-                <ul class="ingredients">
-                    <li>mozzarella</li>
-                    <li>bacó</li>
-                    <li>ceba</li>
-                    <li>nata</li>
-                    <li>formatge de cabra</li>
-                    <li>orenga</li>
-                </ul>
-            </li>
-            <li>
-                <div class="plat-titol">
-                Speck <span class="preu">16,60€</span>
-                </div>
-                <ul class="ingredients">
-                    <li>mozzarella</li>
-                    <li>speck</li>
-                    <li>gorgonzola</li>
-                    <li>porcini</li>
-                    <li>ceba</li>
-                    <li>nous</li>
-                    <li>orenga</li>
-                </ul>
-        </ul>
-        </section>
-        <section class="plats-section">
-        <h2>Postres casolans</h2>
-        <div class="image-categoria">
-            <figure>
-                <img class="img-carta" src="img/tiramisu.jpg" alt="Tiramisú">
-                <figcaption class="comentari-pizza">El tiramisú de la casa</figcaption>
-            </figure>
-        </div>
-        <ul class="plats">
-            <li>
-                <div class="plat-titol">Tiramisú <span class="preu">5,00€</span></div>
-                <ul class="ingredients">
-                    <li>mascarpone</li>
-                    <li>cafè</li>
-                    <li>llengües de gat</li>
-                    <li>ou</li>
-                    <li>sucre</li>
-                    <li>cacao</li>
-                </ul>
-            </li>
-            <li>
-                <div class="plat-titol">Panacota <span class="preu">5,00€</span></div>
-                <ul class="ingredients">
-                    <li>nata</li>
-                    <li>sucre</li>
-                    <li>gelatina</li>
-                    <li>vainilla</li>
-                   <li>mermelada de</li>
-                    <li>fruites del bosc</li>
-                </ul>
-            </li>
-            <li>
-                <div class="plat-titol">Trufes de xocolata amb nata <span class="preu">5,00€</span></div>
-            </li>
-            <li>
-                <div class="plat-titol">Brownie amb nata i nous <span class="preu">5,00€</span></div>
-            </li>
-            
-        </ul>
-        </section>
-        <section class="plats-section">
-        <h2>Begudes</h2>
-        <ul class="plats">
-            <li><div class="plat-titol">Coca-cola <span class="preu">3,50€</span></div>
-            </li>
-            <li>
-                <div class="plat-titol">Coca-cola zero <span class="preu">3,50€</span></div>
-            </li>
-            <li>
-                <div class="plat-titol">Fanta de llimona <span class="preu">3,50€</span></div>
-            </li>
-            <li>
-                <div class="plat-titol">Fanta de llimona zero <span class="preu">3,50€</span></div>
-            </li>
-            <li>
-                <div class="plat-titol">Fanta de taronja <span class="preu">3,50€</span></div>
-            </li>
-            <li>
-                <div class="plat-titol">Fanta de taronja zero <span class="preu">3,50€</span></div>
-            </li>
-            <li>
-                <div class="plat-titol">Aquarius de llimona <span class="preu">3,50€</span></div>
-            </li>
-            <li>
-                <div class="plat-titol">Estrella Damm <span class="preu">3,50€</span></div>
-            </li>
-            <li>
-                <div class="plat-titol">Estrella Damm 0% alcohol <span class="preu">3,50€</span></div>
-            </li>
-            <li>
-                <div class="plat-titol">Voll Damm <span class="preu">3,50€</span></div>
-            </li>
-        </ul>
-    </section>
-</div>
+            <section class="plats-section">
+                <details>
+                    <summary>
+                        <h2>Pizzes <span class="fletxa">&#9654;</span></h2>
+                    </summary>
 
-</main>
-    
-<footer>
-    <div class="linia-movil">
-        <nav class="footer-informació" aria-label="Informació del lloc">
-            <p>Nosaltres</p>
-            <ul>
-                <li><a href="Detail1.html">Sobre nosaltres</a></li>
-                <li><a href="Detail1.html">Contacte</a></li>
-            </ul>
-        </nav>
-        <nav class="footer-social" aria-label="Xarxes socials">
-            <p>Xarxes socials</p>
-            <ul>
-                <li><a href="#">Instagram</a></li>
-                <li><a href="#">TikTok</a></li>
-                <li><a href="#">X</a></li>
-            </ul>
-        </nav> 
-        <nav class="footer-legal" aria-label="Legal">
-            <p>Nota legal</p>
-            <ul>
-                <li><a href="#">Política de privacitat</a></li>
-                <li><a href="#">Política de cookies</a></li>
-                <li><a href="#">Avís legal</a></li>
-            </ul>
-        </nav>
+                    <div class="image-categoria">
+                        <figure>
+                            <img class="img-carta" src="img/diavola.jpg" alt="Pizza Diavola">
+                            <figcaption class="comentari-pizza">Pizza Diavola. Una de les pizzes més destaacades de la
+                                carta.</figcaption>
+                        </figure>
+                    </div>
+
+                    <ul class="plats">
+                        <li id="pizza-destacada-0">
+                            <div class="plat-titol">
+                                Margarita <span class="preu">12,00€</span>
+                            </div>
+                            <ul class="ingredients">
+                                <li>salsa de tomàquet</li>
+                                <li>mozzarella</li>
+                                <li>albahaca</li>
+                                <li>orenga</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="plat-titol">
+                                Marinara <span class="preu">12,50€</span>
+                            </div>
+                            <ul class="ingredients">
+                                <li>salsa de tomàquet</li>
+                                <li>mozzarella</li>
+                                <li>all</li>
+                                <li>oli d'oliva</li>
+                                <li>orenga</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="plat-titol">
+                                Proscuitto <span class="preu">12,50€</span>
+                            </div>
+                            <ul class="ingredients">
+                                <li>salsa de tomàquet</li>
+                                <li>mozzarella</li>
+                                <li>pernil dolç</li>
+                                <li>orenga</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="plat-titol">
+                                Bacó <span class="preu">15,00€</span>
+                            </div>
+                            <ul class="ingredients">
+                                <li>salsa de tomàquet</li>
+                                <li>mozzarella</li>
+                                <li>bacó</li>
+                            </ul>
+                        </li>
+                        <li id="pizza-destacada1">
+                            <div class="plat-titol">
+                                Diavola <span class="preu">13,50€</span>
+                            </div>
+                            <ul class="ingredients">
+                                <li>salsa de tomàquet</li>
+                                <li>mozzarella</li>
+                                <li>xoriço picant</li>
+                                <li>albahaca</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="plat-titol">
+                                4 estacions <span class="preu">14,00€</span>
+                            </div>
+                            <ul class="ingredients">
+                                <li>salsa de tomàquet</li>
+                                <li>mozzarella</li>
+                                <li>pernil dolç</li>
+                                <li>escarxofa</li>
+                                <li>xampinyons</li>
+                                <li>orenga</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="plat-titol">
+                                Capritxosa <span class="preu">14,25€</span>
+                            </div>
+                            <ul class="ingredients">
+                                <li>salsa de tomàquet</li>
+                                <li>mozzarella</li>
+                                <li>pernil dolç</li>
+                                <li>escarxofa</li>
+                                <li>xampinyons</li>
+                                <li>olives negres</li>
+                                <li>orenga</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="plat-titol">
+                                La Garriga <span class="preu">14,75€</span>
+                            </div>
+                            <ul class="ingredients">
+                                <li>salsa de tomàquet</li>
+                                <li>mozzarella</li>
+                                <li>botifarra</li>
+                                <li>gorgonzola</li>
+                                <li>ceba</li>
+                                <li>orenga</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="plat-titol">
+                                Barbacoa <span class="preu">15,00€</span>
+                            </div>
+                            <ul class="ingredients">
+                                <li>salsa de tomàquet</li>
+                                <li>mozzarella</li>
+                                <li>bacó</li>
+                                <li>botifarra</li>
+                                <li>salsa barbacoa</li>
+                                <li>orenga</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="plat-titol">
+                                Gambini <span class="preu">15,35€</span>
+                            </div>
+                            <ul class="ingredients">
+                                <li>salsa de tomàquet</li>
+                                <li>mozzarella</li>
+                                <li>pernil dolç</li>
+                                <li>gambes</li>
+                                <li>orenga</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="plat-titol">
+                                Pikachu <span class="preu">15,50€</span>
+                            </div>
+                            <ul class="ingredients">
+                                <li>salsa de tomàquet</li>
+                                <li>mozzarella</li>
+                                <li>pernil dolç</li>
+                                <li>gambes</li>
+                                <li>nata</li>
+                                <li>orenga</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="plat-titol">
+                                Vegetariana <span class="preu">14,00€</span>
+                            </div>
+                            <ul class="ingredients">
+                                <li>salsa de tomàquet</li>
+                                <li>mozzarella</li>
+                                <li>verdures de temporada</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="plat-titol">
+                                Little Italy <span class="preu">15,50€</span>
+                            </div>
+                            <ul class="ingredients">
+                                <li>salsa de tomàquet</li>
+                                <li>mozzarella</li>
+                                <li>bacó</li>
+                                <li>mozarella di buffala</li>
+                                <li>ou</li>
+                                <li>orenga</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="plat-titol">
+                                Salmó
+                                <span class="preu">15,50€</span>
+                            </div>
+                            <ul class="ingredients">
+                                <li>salsa de tomàquet</li>
+                                <li>mozzarella</li>
+                                <li>salmó</li>
+                                <li>orenga</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="plat-titol">
+                                Deliciosa <span class="preu">15,90€</span>
+                            </div>
+                            <ul class="ingredients">
+                                <li>salsa de tomàquet</li>
+                                <li>mozzarella</li>
+                                <li>espinacs</li>
+                                <li>porcini</li>
+                                <li>ricotta</li>
+                                <li>orenga</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="plat-titol">
+                                Primavera <span class="preu">15,95€</span>
+                            </div>
+                            <ul class="ingredients">
+                                <li>salsa de tomàquet</li>
+                                <li>mozzarella</li>
+                                <li>esparrecs</li>
+                                <li>tomàquets cherries</li>
+                                <li>pernil ibèric</li>
+                                <li>orenga</li>
+                            </ul>
+                        </li>
+                        <li id="pizza-destacada3">
+                            <div class="plat-titol">
+                                Montserrat <span class="preu">16,00€</span>
+                            </div>
+                            <ul class="ingredients">
+                                <li>salsa de tomàquet</li>
+                                <li>mozzarella</li>
+                                <li>botifarra negra</li>
+                                <li>pebrot vermell</li>
+                                <li>ceba</li>
+                                <li>orenga</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </details>
+
+                <details>
+                    <summary>
+                        <h2>Pizzes blanques <span class="fletxa">&#9654;</span></h2>
+                    </summary>
+
+                    <div class="image-categoria">
+                        <figure>
+                            <img class="img-carta" src="img/pizza-blanca.jpg" alt="Pizza blanca">
+                            <figcaption class="comentari-pizza">Pizza Quatre formatges.</figcaption>
+                        </figure>
+                    </div>
+
+                    <ul class="plats">
+                        <li>
+                            <div class="plat-titol">
+                                Quatre Formatges <span class="preu">14,00€</span>
+                            </div>
+                            <ul class="ingredients">
+                                <li>mozzarella</li>
+                                <li>emmental</li>
+                                <li>gorgonzola</li>
+                                <li>permesà</li>
+                                <li>orenga</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="plat-titol">
+                                Cinc Formatges <span class="preu">14,00€</span>
+                            </div>
+                            <ul class="ingredients">
+                                <li>mozzarella</li>
+                                <li>emmental</li>
+                                <li>gorgonzola</li>
+                                <li>permesà</li>
+                                <li>cabra</li>
+                                <li>orenga</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="plat-titol">
+                                Carbonara <span class="preu">15,00€</span>
+                            </div>
+                            <ul class="ingredients">
+                                <li>mozzarella</li>
+                                <li>pernil dolç</li>
+                                <li>bacó</li>
+                                <li>ceba</li>
+                                <li>nata</li>
+                                <li>orenga</li>
+                            </ul>
+                        </li>
+                        <li id="pizza-destacada2">
+                            <div class="plat-titol">
+                                Cabra <span class="preu">15,50€</span>
+                            </div>
+                            <ul class="ingredients">
+                                <li>mozzarella</li>
+                                <li>bacó</li>
+                                <li>ceba</li>
+                                <li>nata</li>
+                                <li>formatge de cabra</li>
+                                <li>orenga</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="plat-titol">
+                                Speck <span class="preu">16,60€</span>
+                            </div>
+                            <ul class="ingredients">
+                                <li>mozzarella</li>
+                                <li>speck</li>
+                                <li>gorgonzola</li>
+                                <li>porcini</li>
+                                <li>ceba</li>
+                                <li>nous</li>
+                                <li>orenga</li>
+                            </ul>
+                    </ul>
+                </details>
+            </section>
+
+            <section class="plats-section">
+                <details>
+                    <summary>
+                        <h2>Postres casolans <span class="fletxa">&#9654;</span></h2>
+                    </summary>
+                    <div class="image-categoria">
+                        <figure>
+                            <img class="img-carta" src="img/tiramisu.jpg" alt="Tiramisú">
+                            <figcaption class="comentari-pizza">El tiramisú de la casa</figcaption>
+                        </figure>
+                    </div>
+                    <ul class="plats">
+                        <li>
+                            <div class="plat-titol">Tiramisú <span class="preu">5,00€</span></div>
+                            <ul class="ingredients">
+                                <li>mascarpone</li>
+                                <li>cafè</li>
+                                <li>llengües de gat</li>
+                                <li>ou</li>
+                                <li>sucre</li>
+                                <li>cacao</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="plat-titol">Panacota <span class="preu">5,00€</span></div>
+                            <ul class="ingredients">
+                                <li>nata</li>
+                                <li>sucre</li>
+                                <li>gelatina</li>
+                                <li>vainilla</li>
+                                <li>mermelada de</li>
+                                <li>fruites del bosc</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="plat-titol">Trufes de xocolata amb nata <span class="preu">5,00€</span></div>
+                        </li>
+                        <li>
+                            <div class="plat-titol">Brownie amb nata i nous <span class="preu">5,00€</span></div>
+                        </li>
+
+                    </ul>
+                </details>
+            </section>
+
+            <section class="plats-section">
+                <details>
+                    <summary>
+                        <h2>Begudes<span class="fletxa">&#9654;</span></h2>
+                    </summary>
+                    <ul class="plats">
+                        <li>
+                            <div class="plat-titol">Coca-cola <span class="preu">3,50€</span></div>
+                        </li>
+                        <li>
+                            <div class="plat-titol">Coca-cola zero <span class="preu">3,50€</span></div>
+                        </li>
+                        <li>
+                            <div class="plat-titol">Fanta de llimona <span class="preu">3,50€</span></div>
+                        </li>
+                        <li>
+                            <div class="plat-titol">Fanta de llimona zero <span class="preu">3,50€</span></div>
+                        </li>
+                        <li>
+                            <div class="plat-titol">Fanta de taronja <span class="preu">3,50€</span></div>
+                        </li>
+                        <li>
+                            <div class="plat-titol">Fanta de taronja zero <span class="preu">3,50€</span></div>
+                        </li>
+                        <li>
+                            <div class="plat-titol">Aquarius de llimona <span class="preu">3,50€</span></div>
+                        </li>
+                        <li>
+                            <div class="plat-titol">Estrella Damm <span class="preu">3,50€</span></div>
+                        </li>
+                        <li>
+                            <div class="plat-titol">Estrella Damm 0% alcohol <span class="preu">3,50€</span></div>
+                        </li>
+                        <li>
+                            <div class="plat-titol">Voll Damm <span class="preu">3,50€</span></div>
+                        </li>
+                    </ul>
+                </details>
+            </section>
         </div>
-    </footer>   
+
+    </main>
+
+    <footer>
+        <div class="linia-movil">
+            <nav class="footer-informació" aria-label="Informació del lloc">
+                <p>Nosaltres</p>
+                <ul>
+                    <li><a href="Detail1.html">Sobre nosaltres</a></li>
+                    <li><a href="Detail1.html">Contacte</a></li>
+                </ul>
+            </nav>
+            <nav class="footer-social" aria-label="Xarxes socials">
+                <p>Xarxes socials</p>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">TikTok</a></li>
+                    <li><a href="#">X</a></li>
+                </ul>
+            </nav>
+            <nav class="footer-legal" aria-label="Legal">
+                <p>Nota legal</p>
+                <ul>
+                    <li><a href="#">Política de privacitat</a></li>
+                    <li><a href="#">Política de cookies</a></li>
+                    <li><a href="#">Avís legal</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
 
     <script type="module" src="app.js"></script>
 </body>
+
 </html>

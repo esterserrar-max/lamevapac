@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html lang="ca">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>Little Italy</title>
-        <link rel="icon" type="image/png" href="img/logoLI.png">
-        <meta name="description" content="Pàgina Home del restaurant Little Italy">
-        
-        <link rel="stylesheet" href="style.scss">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Little Italy</title>
+    <link rel="icon" type="image/png" href="img/logoLI.png">
+    <meta name="description" content="Pàgina Home del restaurant Little Italy">
+
+    <link rel="stylesheet" href="style.scss">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
     <header>
         <nav class="menu-principal" aria-label="Navegació principal">
             <a href="index.html">
                 <img src="img/logoLI.png" alt="Logo del restaurant Little Italy" class="img-menu-principal">
             </a>
-            <ul class="enllaços-menu-principal">
+
+           <button class="hamburguesa" aria-label="Mostra el menú"> &#9776;</button>
+           <ul id="myLinks" class="enllaços-menu-principal">
                 <li><a href="Categoria.html">Sobre Nosaltres</a></li>
                 <li><a href="Detail1.html">La Carta</a></li>
                 <li><a href="Detail2.html">Blog</a></li>
@@ -27,9 +32,9 @@
             </ul>
         </nav>
     </header>
-    
+
     <main class="contenidor-index">
-        
+
         <div class="home">
             <section class="portada">
                 <h1 class="animate__animated animate__fadeIn">LITTLE ITALY</h1>
@@ -43,7 +48,7 @@
                     <p>Des de 1950, la nostra família prepara pizza napolitana seguint la recepta tradicional.</p>
                 </section>
             </div>
-            
+
             <div class="borde">
                 <section class="reserva">
                     <h2>Reserva la teva taula</h2>
@@ -68,35 +73,36 @@
 
     <footer>
         <div class="linia-movil">
-            
-        <nav class="footer-informació" aria-label="Informació del lloc">
-            <p>Nosaltres</p>
-            <ul>
-                <li><a href="Detail1.html">Sobre nosaltres</a></li>
-                <li><a href="Detail1.html">Contacte</a></li>
-            </ul>
-        </nav>
-        <nav class="footer-social" aria-label="Xarxes socials">
-            <p>Xarxes socials</p>
-            <ul>
-                <li><a href="#">Instagram</a></li>
-                <li><a href="#">TikTok</a></li>
-                <li><a href="#">X</a></li>
-            </ul>
-        </nav> 
-            
-        
-        <nav class="footer-legal" aria-label="Legal">
-            <p>Nota legal</p>
-            <ul>
-                <li><a href="#">Política de privacitat</a></li>
-                <li><a href="#">Política de cookies</a></li>
-                <li><a href="#">Avís legal</a></li>
-            </ul>
-        </nav>
+
+            <nav class="footer-informació" aria-label="Informació del lloc">
+                <p>Nosaltres</p>
+                <ul>
+                    <li><a href="Detail1.html">Sobre nosaltres</a></li>
+                    <li><a href="Detail1.html">Contacte</a></li>
+                </ul>
+            </nav>
+            <nav class="footer-social" aria-label="Xarxes socials">
+                <p>Xarxes socials</p>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">TikTok</a></li>
+                    <li><a href="#">X</a></li>
+                </ul>
+            </nav>
+
+
+            <nav class="footer-legal" aria-label="Legal">
+                <p>Nota legal</p>
+                <ul>
+                    <li><a href="#">Política de privacitat</a></li>
+                    <li><a href="#">Política de cookies</a></li>
+                    <li><a href="#">Avís legal</a></li>
+                </ul>
+            </nav>
         </div>
     </footer>
 
     <script type="module" src="app.js"></script>
 </body>
+
 </html>
