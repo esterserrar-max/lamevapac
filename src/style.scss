@@ -6,6 +6,10 @@ $font-stack: 'Noto Sans', sans-serif;
 
 /* Estil de la font */
 body{
+  max-width: 400px; /*Màxima amplada*/
+  margin: 0 auto;
+  box-sizing: border-box; /*Control de l'amplada total*/
+  overflow-x: hidden;
   font-family: Noto Sans;
   line-height: 1.5;
 }
@@ -46,19 +50,26 @@ footer {
   background-color: $secondary-color;
 }
 
-body{
-    max-width: 400px; /*Màxima amplada*/
-    margin: 0 auto;
-    box-sizing: border-box; /*Control de l'amplada total*/
-    overflow-x: hidden;
-}
 /*-------------------*/
 /* Estil del footer */
 /*-------------------*/
 
 footer{
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
+
+.linia-movil {
+  display: flex;
+  flex-wrap: wrap; 
+  padding: 1em;
+  gap: 1em;       
+  justify-content: center;
+  width: 100%;    
+}
+
 footer a{
   color: $primary-color;
   padding: 0.3em;
@@ -69,23 +80,9 @@ footer p{
   color:#ffffff;
   font-size: 0.7em;
   font-weight: 700;
-  white-space: normal; /* evita salt de linia */
-  padding-top: 0.5em;
-  padding-left: 0.2em;
-}
-.linia-movil{
-  display: flex; /* disposa els 3 navegadors en horitzontal */
-  gap: 3.3em; /* separació entre ells */
+  white-space: normal; 
 }
 
-.footer-informació{
-  white-space: nowrap; /* evita salt de linia */
-
-}
-
-.footer-legal{
-  white-space: nowrap; /* evita salt de linia */
-}
 
 /*-------------------------------*/
 /* MENÚ DE NAVEGACIÓ PRINCIPAL */
@@ -110,8 +107,10 @@ footer p{
 /* Logo */
 .img-menu-principal {
   width: 60px;
+  height: auto;
   margin-left: 0;
   margin-right: 0.5em;
+  flex-shrink: 0; /* Evita que el logo s'encolleixi en pantalles petites */
 }
 
 /* Menú horizontal */
@@ -537,9 +536,9 @@ iframe{
 
 /*Ocultació dels plats de pizzes, pizzes blanques, postres i begudes perque funcioni menu desplegable*/
 
-/*.plats-section .plats {
+.plats-section .plats {
   display: none; /* ocult per defecte */
-/* } */
+} 
 
 /*Imatges pizzes de la carta*/
 
@@ -850,25 +849,25 @@ iframe{
 /* Smartphone 380px*/
 @media screen and (min-width: 380px) {
   .linia-movil {
-    gap: 4em; /* separació entre ells */
+    padding: 0.5em;
+    gap: 2em; /* separació entre ells */
   } 
 }
 
 /*Smartphone 412px*/
 @media screen and (min-width: 412px) {
   .linia-movil{
-    gap: 4.6em;
+    gap: 3em;
   }
 }
+
 /* Smartphone grande */
 @media screen and (min-width: 700px) {
   body{
     width: 100%;
     max-width: 700px;
-    margin: 0 auto; /* centra el cos */
-    padding: 0 0.8em;
   }
-
+ 
   /* Menú principal */
   .menu-principal {
     padding: 1px 2px;
@@ -899,8 +898,8 @@ iframe{
 
   .borde{
   border: 2px solid #D67E2D;
-  padding: 20px;
-  margin: 10px;
+  padding: 4em;
+  margin: 4em;
   color:#000000;
   }
 
@@ -909,19 +908,20 @@ iframe{
     justify-content: space-between;
     padding:2em;  
   }
+  .footer-informació{
+  white-space: nowrap; /* evita salt de linia */
+  overflow-x: auto; /* scroll només si el text és llarg */
+}
 
-  /* Formulari reserves */
+.footer-legal{
+  white-space: nowrap; /* evita salt de linia */
+  overflow-x: auto; /* scroll només si el text és llarg */
+}
+
+/* Formulari reserves */
 #reservationForm{
   display: grid;
   grid-template-columns: 1fr 1fr; /* dues columnes */
-  gap: 2em;
-}
-
-/* Elements dins de .enlinia (Data i Hora) */
-.enlinia{
-  display: flex;            /* molt important */
-  flex-direction: row;      /* es posen en línia en pantalles grans */
-  flex-wrap: wrap;
   gap: 2em;
 }
 
@@ -932,11 +932,6 @@ iframe{
   width: auto;
   padding: 0.6em 1.2em;
 }
-
-  .video iframe {
-    max-width: 80%;  /* ocupa 80% de la pantalla */
-    height: auto;
-  }
 
 /* Imatges principals de cada pagina*/
 .home{
@@ -978,8 +973,7 @@ iframe{
     max-width: 1450px;
     margin: 0 auto; /* centra el cos */
     box-sizing: border-box;
-    background-color: #ffffff; 
-    border-radius: 8px;       
+    background-color: #ffffff;      
     overflow-x: hidden;
     background-color: $secondary-color;
   }
@@ -1003,7 +997,7 @@ iframe{
 
   .enllaços-menu-principal {
     display: flex;
-    gap: 20px;
+    gap: 4em;
     font-size: 0.9em;
     white-space: nowrap;  /* evita salt de línia */
     overflow-x: auto;     /* scroll només si cal */
@@ -1015,7 +1009,7 @@ iframe{
   }
 
   .enllaços-menu-principal a {
-    color: #ffffff;
+    color: $primary-color;
     text-decoration: none;
   }
 
@@ -1147,7 +1141,7 @@ footer p{
   main{
   max-width: 1000px;   
   margin: 0 auto;     
-  padding: 0 2em; 
+  padding: 0 0; 
   box-sizing: border-box;    
   }
 
