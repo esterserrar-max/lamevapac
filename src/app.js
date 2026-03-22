@@ -1,3 +1,4 @@
+import 'animate.css';
 // JavaScript per mostrar la carta 
 const seccions = document.querySelectorAll('.plats-section');
 

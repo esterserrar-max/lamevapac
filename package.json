@@ -9,9 +9,9 @@
     "not dead"
   ],
   "scripts": {
-  "start": "parcel src/index.html src/Categoria.html src/Detail1.html src/Detail2.html src/Enllacos.html",
-  "build": "parcel build src/index.html src/Categoria.html src/Detall1.html src/Detall2.html src/Enllacos.html"
-},
+    "start": "parcel src/index.html src/Categoria.html src/Detail1.html src/Detail2.html src/Enllacos.html",
+    "build": "parcel build src/index.html src/Categoria.html src/Detall1.html src/Detall2.html src/Enllacos.html"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -23,5 +23,8 @@
     "postcss": "^8.5.8",
     "postcss-preset-env": "^11.2.0",
     "sass": "^1.97.3"
+  },
+  "dependencies": {
+    "animate.css": "^4.1.1"
   }
 }
