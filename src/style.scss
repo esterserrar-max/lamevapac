@@ -15,7 +15,7 @@ body {
   margin: 0 auto;
   box-sizing: border-box;
   /*Control de l'amplada total*/
-  overflow-x: hidden;
+  overflow-x: hidden; /*Important evitar scroll horitzontal*/
   font-family: Noto Sans;
   line-height: 1.5;
 }
@@ -34,17 +34,23 @@ main {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: underline;
+  color:$secondary-color;
+  font-weight: 700;
 }
 
 ul {
   list-style: none;
 }
 
-/*Estil secció horari*/
+/* Linia decorativa entre seccions */
 
-.horari li {
-  font-size: 0.9em;
+hr {
+  border: none;
+  height: 1px;
+  background: #D67E2D;
+  width: 90%;
+  margin: 2em auto;
 }
 
 /* Amplada total i color del Header y footer */
@@ -84,7 +90,7 @@ footer p {
   color: $primary-color;
   font-size: 0.7em;
   font-weight: 700;
-  white-space: normal;
+  white-space: nowrap;
 }
 
 
@@ -116,7 +122,7 @@ footer p {
 .img-menu-principal {
   width: 60px;
   height: auto;
-  flex-shrink: 0;
+  flex-shrink: 0; /* evita canvis en la mesura de la imatge*/
 }
 
 /* Enllaços escriptori */
@@ -126,7 +132,7 @@ footer p {
 }
 
 .enllaços-menu-principal a {
-  color: #fff;
+  color: $primary-color;
   text-decoration: none;
   font-weight: 500;
 }
@@ -139,7 +145,7 @@ footer p {
 .hamburguesa {
   display: none; /* només mòbil */
   font-size: 28px;
-  color: white;
+  color: $primary-color;
   background: none;
   border: none;
   cursor: pointer;
@@ -157,7 +163,7 @@ footer p {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  color: #ffffff;
+  color: $primary-color;
   min-height: 40vh;
 }
 
@@ -213,7 +219,7 @@ footer p {
   display: block;
   margin: 0;
   padding: 0.5em;
-  color: #000;
+  color: $secondary-color;
   /* text visible dins de la secció */
 }
 
@@ -253,11 +259,11 @@ footer p {
 
 /*Enquadrant marró de les 3 seccions*/
 .borde {
-  border: 2px solid #D67E2D;
+  border: 2px solid $third-color;
   padding: 20px;
   margin: 20px;
 
-  color: #000000;
+  color: $secondary-color;
 }
 
 /*-------------------*/
@@ -271,7 +277,7 @@ footer p {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  color: #000;
+  color: $secondary-color;
   min-height: 15vh;
 }
 
@@ -299,16 +305,6 @@ ul {
   font-weight: 700;
   padding-left: 0;
   margin-left: 0;
-}
-
-/* Linia decorativa entre seccions */
-
-hr {
-  border: none;
-  height: 1px;
-  background: #D67E2D;
-  width: 90%;
-  margin: 2em auto;
 }
 
 /* Estil presentació */
@@ -421,10 +417,16 @@ input[type="time"] {
   grid-column: 1 / -1;
 }
 
-
 .enlinia>div {
   flex: 1;
   /* cada columna ocupa la meitat */
+}
+
+input:invalid {
+  border: 2px solid red;
+}
+input:valid {
+  border: 2px solid green;
 }
 
 /* Botó confirmar reserva */
@@ -438,10 +440,6 @@ input[type="time"] {
   padding-top: 2em;
 }
 
-/* No mostrar la taula fins que hi hagi reserva */
-#reservationTable {
-  display: none;
-}
 
 /* Estil localitzacio */
 
@@ -479,7 +477,6 @@ input[type="time"] {
   text-decoration: underline;
   color: #000000;
 }
-
 
 /* Estil consell */
 
@@ -529,9 +526,9 @@ iframe {
   padding-bottom: 2em;
 }
 
-/*--__--------------------*/
+/*------------------------*/
 /* Estil de Detail1.html */
-/*--__--------------------*/
+/*------------------------*/
 
 /*Imatge de fons del títol La carta del Little Italy*/
 
@@ -566,19 +563,20 @@ iframe {
   font-weight: 500;
 }
 
-/*Ocultació dels plats de pizzes, pizzes blanques, postres i begudes perque funcioni menu desplegable*/
+/*Desplegament de les pizzes, postres i begudes*/
 
 summary {
   cursor: pointer;
   list-style: none;
 }
 
+/* Estil de la fletxa */
 summary .fletxa {
   display: inline-block;
   margin-left: 8px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease; /* transformacio en 3 segons */
 }
-
+/* Fletxa oberta */
 details[open] .fletxa {
   transform: rotate(90deg);
 }
@@ -591,6 +589,7 @@ details[open] .fletxa {
   height: auto;
 }
 
+/* Div de detail1, imatge a postres*/
 .image-categoria {
   display: flex;
   justify-content: center;
@@ -634,15 +633,14 @@ details[open] .fletxa {
 
 .plat-titol .preu {
   margin-left: 10px;
-  /* una mica d'espai entre nom i preu */
 }
 
 .ingredients {
   display: inline;
-  /* fa que els <li> siguin en línia */
+  
   flex-wrap: wrap;
   list-style: none;
-  /* treu els punts de la llista */
+  
   padding: 0;
   padding-right: 2em;
   padding-bottom: 1.3em;
@@ -653,13 +651,10 @@ details[open] .fletxa {
 }
 
 .ingredients li {
-  display: inline;
-  /* tots els items en la mateixa línia */
+  display: inline; /* tots els items en la mateixa línia */
   white-space: normal;
-  word-break: break-word;
-  /* força el trencament de paraules llargues */
-  overflow-wrap: anywhere;
-  /* trenca paraules si cal */
+  word-break: break-word; /* força el trencament de paraules llargues */
+  overflow-wrap: anywhere; /* trenca paraules si cal */
 }
 
 .plat-titol,
@@ -671,13 +666,11 @@ details[open] .fletxa {
 }
 
 .ingredients li::after {
-  content: ", ";
-  /* afegeix coma després de cada ingredient */
+  content: ", "; /* afegeix coma després de cada ingredient */
 }
 
 .ingredients li:last-child::after {
-  content: "";
-  /* treu la coma de l'últim element */
+  content: ""; /* treu la coma de l'últim element */
 }
 
 .plats {
@@ -703,7 +696,7 @@ details[open] .fletxa {
 /* Estil imatge del titol */
 .titol-blog {
   text-align: center;
-  -webkit-text-stroke: 1px #ffffff;
+  -webkit-text-stroke: 1px $primary-color;
   padding-top: 0.3em;
 }
 
@@ -812,9 +805,9 @@ details[open] .fletxa {
 }
 
 .data-resaltada {
-  background-color: #D67E2D;
+  background-color: $third-color;
   /* fons taronja */
-  color: #ffffff;
+  color: $primary-color;
   /* text blanc */
   padding: 0.1em 0.1em;
   /* espai al voltant del text */
@@ -866,7 +859,7 @@ details[open] .fletxa {
 .titol-enllac {
   text-align: center;
   -webkit-text-stroke: 1px #ffffff;
-  padding-top: 2em;
+  padding-top: 0.5em;
   font-size: 2em;
 }
 
@@ -906,7 +899,7 @@ details[open] .fletxa {
 .referencies a {
   text-decoration: underline;
   font-weight: 500;
-  color: #000000;
+  color: $secondary-color;
 }
 
 .titol-ref {
@@ -914,9 +907,19 @@ details[open] .fletxa {
   -webkit-text-stroke: 1px #ffffff;
   padding-top: 1em;
 }
-
-.estil{
-  padding-bottom: 5em;
+.lletra p{
+  padding-top: 1em;
+  padding-bottom: 1em;
+  text-align: justify;
+}
+.estil-llistes{
+  text-align: justify;
+}
+.estil-llistes h2{
+  padding-bottom: 1em;
+}
+.estil-llistes li{
+  padding-bottom: 1em;
 }
 
 /*-----------------------*/
@@ -975,10 +978,10 @@ details[open] .fletxa {
   }
 
   .borde {
-    border: 2px solid #D67E2D;
+    border: 2px solid $third-color;
     padding: 4em;
     margin: 4em;
-    color: #000000;
+    color: $secondary-color;
   }
 
   /*Footer*/
@@ -1044,30 +1047,30 @@ details[open] .fletxa {
   }
 
   .titol-enllac {
-    padding-top: 2em;
+    padding-top: 0.5em;
     font-size: 2.3em;
   }
 
 }
 
-
+/* Menú hamburguesa responsive */
 
   @media (max-width: 768px) {
     .hamburguesa {
     display: block;          /* Mostra la icona a mòbil */
-    font-size: 32px;         /* Més gran per veure-la bé */
-    color: #fff;             /* Blanc si fons fosc */
+    font-size: 32px;         
+    color: $primary-color;             
     background: none;
     border: none;
     cursor: pointer;
-    padding: 0.25em 0.5em;   /* Àrea clicable més gran */
+    padding: 0.25em 0.5em;   /* Àrea clicable */
     z-index: 1100;           /* Per sobre del menú i contingut */
   }
   #myLinks {
     display: none; /* ocult per defecte */
     flex-direction: column;
     position: absolute;
-    top: 60px; /* ajusta segons l’alçada del menú */
+    top: 60px; 
     left: 0;
     width: 100%;
     background-color: #333;
@@ -1083,7 +1086,7 @@ details[open] .fletxa {
 /* Ordenador de 1024px*/
 @media screen and (min-width: 1024px) {
   html {
-    background-color: #000000;
+    background-color: $secondary-color;
     /*Color de fons, efecte targeta*/
   }
 
@@ -1093,7 +1096,7 @@ details[open] .fletxa {
     margin: 0 auto;
     /* centra el cos */
     box-sizing: border-box;
-    background-color: #ffffff;
+    background-color: $primary-color;
     overflow-x: hidden;
     background-color: $secondary-color;
   }
@@ -1143,10 +1146,10 @@ details[open] .fletxa {
   /*Enquadrant marró de les 3 seccions*/
   .borde {
     flex: 0 0 250px;
-    border: 2px solid #D67E2D;
+    border: 2px solid $third-color;
     padding: 2px;
     margin: 0;
-    color: #000000;
+    color: $secondary-color;
     width: 100%;
     max-width: 250px;
     height: 250px;
@@ -1253,7 +1256,7 @@ details[open] .fletxa {
 
   /* Titol de Enllacos.html*/
   .titol-enllac {
-    padding-top: 1.5em;
+    padding-top: 0.5em;
   }
 
 }
@@ -1261,7 +1264,7 @@ details[open] .fletxa {
 
 @media screen and (min-width: 1200px) {
   html {
-    background-color: #000000;
+    background-color: $secondary-color;
     /*Color de fons, efecte targeta*/
   }
 
@@ -1271,7 +1274,7 @@ details[open] .fletxa {
     margin: 0 auto;
     /* centra el cos */
     box-sizing: border-box;
-    background-color: #ffffff;
+    background-color: $primary-color;
     border-radius: 8px;
     overflow-x: hidden;
   }
@@ -1286,24 +1289,20 @@ details[open] .fletxa {
   /*Menu principal*/
   .menu-principal {
     padding: 1px 2px;
-    /* más espacio a los lados */
   }
 
   .img-menu-principal {
     width: 80px;
-    /* logo más grande */
+    /* logo més gran */
   }
 
   .enllaços-menu-principal {
     gap: 35px;
-    /* más separación entre enlaces */
     font-size: 1.1em;
-    /* texto un poco más grande */
   }
 
+
   /*Estil index.html*/
-
-
   .contenidor-home {
     justify-content: center;
   }
@@ -1448,7 +1447,7 @@ details[open] .fletxa {
 
   /* Titol de Enllacos.html*/
   .titol-enllac {
-    padding-top: 2em;
+    padding-top: 0.2em;
     font-size: 2.5em;
   }
 

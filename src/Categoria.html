@@ -24,8 +24,8 @@
                 <img src="img/logoLI.png" alt="Logo del restaurant Little Italy" class="img-menu-principal">
             </a>
 
-           <button class="hamburguesa" aria-label="Mostra el menú"> &#9776;</button>
-           <ul id="myLinks" class="enllaços-menu-principal">
+            <button class="hamburguesa" aria-label="Mostra el menú"> &#9776;</button>
+            <ul id="myLinks" class="enllaços-menu-principal">
                 <li><a href="Categoria.html">Sobre Nosaltres</a></li>
                 <li><a href="Detail1.html">La Carta</a></li>
                 <li><a href="Detail2.html">Blog</a></li>
@@ -70,7 +70,7 @@
             <h2>Serveis que oferim</h2>
             <p>Al Little Italy oferim servei de restaurant, per emportar i a domicili. Per les comandes a domicili
                 cobrarem 2€ per viatge.</p>
-            <p><a href="Detail1.html"><b>Aquí</b></a> podeu fer un cop d'ull a la nostra carta.</p>
+            <p>Per més informació odeu fer un cop d'ull a la <a href="Detail1.html">nostra carta</a>.</p>
 
             <div class="img">
                 <figure>
@@ -109,26 +109,31 @@
 
             <h3>Per reservar ompliu el següent formulari:</h3>
 
-            <form id="reservationForm">
-                <div class="fila">
+            <form id="reservationForm" method="post">
+                
                     <label for="name">Nom i Cognoms</label>
-                    <input type="text" id="name" placeholder="Nom" required>
-                </div>
+                    <input type="text" id="name" placeholder="Introdueix el teu nom" required aria-describedby="nameError">
+                    <span class="missatge-error" id="nameError" aria-live="polite"></span>
+                
 
-                <div class="fila">
+                
                     <label for="people">Persones</label>
-                    <input type="number" id="people" placeholder="Persones" required min="1">
-                </div>
+                    <input type="number" id="people" placeholder="Número de persones" required min="1"
+                    aria-describedby="numberError">
+                    <span class="missatge-error" id="numberError" aria-live="polite"></span>
+             
 
                 <div class="enlinia">
-                    <div class="fila-2">
+                    
                         <label for="date">Data</label>
-                        <input type="date" id="date" required>
-                    </div>
-                    <div class="fila-2">
+                        <input type="date" id="date" required aria-describedby="dateError">
+                        <span class="missatge-error" id="dateError" aria-live="polite"></span>
+                    
+                    
                         <label for="hour">Hora</label>
-                        <input type="time" id="hour" required>
-                    </div>
+                        <input type="time" id="hour" required aria-describedby="timeError">
+                        <span class="missatge-error" id="timeError" aria-live="polite"></span>
+                    
                 </div>
 
                 <button type="submit">Reservar</button>
@@ -136,17 +141,7 @@
             </form>
 
             <h3 id="confirmationText" style="display:none;">Confirmació de la reserva:</h3>
-            <table id="reservationTable">
-                <thead>
-                    <tr>
-                        <th>Nom</th>
-                        <th>Persones</th>
-                        <th>Data</th>
-                        <th>Hora</th>
-                    </tr>
-                </thead>
-                <tbody id="reservationTableBody"></tbody>
-            </table>
+
             <div class="img">
                 <figure>
                     <img class="img-nosaltres" src="img/exteriorrestaurant.jpg" alt="Terrassa del restaurant">
@@ -200,7 +195,7 @@
 
             <div class="video">
                 <iframe src="https://www.youtube.com/embed/uTFYGK5nkcs?si=2ImaaCEe3QlAe8lq"
-                    title="Punts de menjar tradicions de Nàpols" frameborder="0"
+                    title="Punts de menjar tradicions de Nàpols"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
@@ -211,6 +206,7 @@
 
     <footer>
         <div class="linia-movil">
+
             <nav class="footer-informació" aria-label="Informació del lloc">
                 <p>Nosaltres</p>
                 <ul>
@@ -221,12 +217,14 @@
             <nav class="footer-social" aria-label="Xarxes socials">
                 <p>Xarxes socials</p>
                 <ul>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">TikTok</a></li>
-                    <li><a href="#">X</a></li>
+                    <li><a href="#" aria-label="Pàgina d'Instagram">Instagram</a></li>
+                    <li><a href="#" aria-label="Pàgina de Tiktok">TikTok</a></li>
+                    <li><a href="#" aria-label="Pàgina del compte X">X</a></li>
                 </ul>
             </nav>
-            <nav class="footer-legal" aria-label="Legal">
+
+
+            <nav class="footer-legal" aria-label=" Polítiques legals">
                 <p>Nota legal</p>
                 <ul>
                     <li><a href="#">Política de privacitat</a></li>
