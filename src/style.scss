@@ -15,7 +15,8 @@ body {
   margin: 0 auto;
   box-sizing: border-box;
   /*Control de l'amplada total*/
-  overflow-x: hidden; /*Important evitar scroll horitzontal*/
+  overflow-x: hidden;
+  /*Important evitar scroll horitzontal*/
   font-family: Noto Sans;
   line-height: 1.5;
 }
@@ -35,7 +36,7 @@ main {
 
 a {
   text-decoration: underline;
-  color:$secondary-color;
+  color: $secondary-color;
   font-weight: 700;
 }
 
@@ -122,7 +123,8 @@ footer p {
 .img-menu-principal {
   width: 60px;
   height: auto;
-  flex-shrink: 0; /* evita canvis en la mesura de la imatge*/
+  flex-shrink: 0;
+  /* evita canvis en la mesura de la imatge*/
 }
 
 /* Enllaços escriptori */
@@ -143,7 +145,8 @@ footer p {
 
 /* Botó hamburguesa */
 .hamburguesa {
-  display: none; /* només mòbil */
+  display: none;
+  /* només mòbil */
   font-size: 28px;
   color: $primary-color;
   background: none;
@@ -412,9 +415,7 @@ input[type="time"] {
   display: flex;
   gap: 1.2em;
   flex-wrap: wrap;
-  flex-direction: column;
   gap: 1em;
-  grid-column: 1 / -1;
 }
 
 .enlinia>div {
@@ -425,6 +426,7 @@ input[type="time"] {
 input:invalid {
   border: 2px solid red;
 }
+
 input:valid {
   border: 2px solid green;
 }
@@ -574,8 +576,10 @@ summary {
 summary .fletxa {
   display: inline-block;
   margin-left: 8px;
-  transition: transform 0.3s ease; /* transformacio en 3 segons */
+  transition: transform 0.3s ease;
+  /* transformacio en 3 segons */
 }
+
 /* Fletxa oberta */
 details[open] .fletxa {
   transform: rotate(90deg);
@@ -637,10 +641,10 @@ details[open] .fletxa {
 
 .ingredients {
   display: inline;
-  
+
   flex-wrap: wrap;
   list-style: none;
-  
+
   padding: 0;
   padding-right: 2em;
   padding-bottom: 1.3em;
@@ -651,10 +655,13 @@ details[open] .fletxa {
 }
 
 .ingredients li {
-  display: inline; /* tots els items en la mateixa línia */
+  display: inline;
+  /* tots els items en la mateixa línia */
   white-space: normal;
-  word-break: break-word; /* força el trencament de paraules llargues */
-  overflow-wrap: anywhere; /* trenca paraules si cal */
+  word-break: break-word;
+  /* força el trencament de paraules llargues */
+  overflow-wrap: anywhere;
+  /* trenca paraules si cal */
 }
 
 .plat-titol,
@@ -666,11 +673,13 @@ details[open] .fletxa {
 }
 
 .ingredients li::after {
-  content: ", "; /* afegeix coma després de cada ingredient */
+  content: ", ";
+  /* afegeix coma després de cada ingredient */
 }
 
 .ingredients li:last-child::after {
-  content: ""; /* treu la coma de l'últim element */
+  content: "";
+  /* treu la coma de l'últim element */
 }
 
 .plats {
@@ -806,15 +815,10 @@ details[open] .fletxa {
 
 .data-resaltada {
   background-color: #B05907;
-  /* fons taronja */
   color: $primary-color;
-  /* text blanc */
   padding: 0.1em 0.1em;
-  /* espai al voltant del text */
   border-radius: 0.1em;
-  /* cantonades arrodonides */
   font-weight: 500;
-  /* opcional, una mica més gruixut */
 }
 
 .recepte-mensual p {
@@ -907,18 +911,22 @@ details[open] .fletxa {
   -webkit-text-stroke: 1px #ffffff;
   padding-top: 1em;
 }
-.lletra p{
+
+.lletra p {
   padding-top: 1em;
   padding-bottom: 1em;
   text-align: justify;
 }
-.estil-llistes{
+
+.estil-llistes {
   text-align: justify;
 }
-.estil-llistes h2{
+
+.estil-llistes h2 {
   padding-bottom: 1em;
 }
-.estil-llistes li{
+
+.estil-llistes li {
   padding-bottom: 1em;
 }
 
@@ -1012,6 +1020,23 @@ details[open] .fletxa {
     gap: 2em;
   }
 
+  .enlinia {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    /* assegura que pugui expandir-se */
+  }
+
+  .input {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 auto;
+    /* no ocupar tot l'ample */
+    width: max-content;
+    /* que tingui l'ample mínim necessari */
+  }
+
+
   /* Botó centrat */
   #reservationForm>button {
     grid-column: 1 / -1;
@@ -1055,22 +1080,27 @@ details[open] .fletxa {
 
 /* Menú hamburguesa responsive */
 
-  @media (max-width: 768px) {
-    .hamburguesa {
-    display: block;          /* Mostra la icona a mòbil */
-    font-size: 32px;         
-    color: $primary-color;             
+@media (max-width: 768px) {
+  .hamburguesa {
+    display: block;
+    /* Mostra la icona a mòbil */
+    font-size: 32px;
+    color: $primary-color;
     background: none;
     border: none;
     cursor: pointer;
-    padding: 0.25em 0.5em;   /* Àrea clicable */
-    z-index: 1100;           /* Per sobre del menú i contingut */
+    padding: 0.25em 0.5em;
+    /* Àrea clicable */
+    z-index: 1100;
+    /* Per sobre del menú i contingut */
   }
+
   #myLinks {
-    display: none; /* ocult per defecte */
+    display: none;
+    /* ocult per defecte */
     flex-direction: column;
     position: absolute;
-    top: 60px; 
+    top: 60px;
     left: 0;
     width: 100%;
     background-color: #333;
@@ -1078,11 +1108,13 @@ details[open] .fletxa {
   }
 
   #myLinks.mostra {
-    display: flex; /* visible quan té la classe 'mostra' */
+    display: flex;
+    /* visible quan té la classe 'mostra' */
   }
 
-  
+
 }
+
 /* Ordenador de 1024px*/
 @media screen and (min-width: 1024px) {
   html {

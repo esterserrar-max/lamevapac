@@ -110,30 +110,31 @@
             <h3>Per reservar ompliu el següent formulari:</h3>
 
             <form id="reservationForm" method="post">
-                
+                <div class="fila">
                     <label for="name">Nom i Cognoms</label>
-                    <input type="text" id="name" placeholder="Introdueix el teu nom" required aria-describedby="nameError">
+                    <input type="text" id="name" placeholder="Introdueix el teu nom" required
+                        aria-describedby="nameError">
                     <span class="missatge-error" id="nameError" aria-live="polite"></span>
-                
-
-                
+                </div>
+                <div class="fila">
                     <label for="people">Persones</label>
                     <input type="number" id="people" placeholder="Número de persones" required min="1"
-                    aria-describedby="numberError">
+                        aria-describedby="numberError">
                     <span class="missatge-error" id="numberError" aria-live="polite"></span>
-             
+                </div>
 
                 <div class="enlinia">
-                    
+
+                    <div class="input">
                         <label for="date">Data</label>
                         <input type="date" id="date" required aria-describedby="dateError">
                         <span class="missatge-error" id="dateError" aria-live="polite"></span>
-                    
-                    
+                    </div>
+                    <div class="input">
                         <label for="hour">Hora</label>
                         <input type="time" id="hour" required aria-describedby="timeError">
                         <span class="missatge-error" id="timeError" aria-live="polite"></span>
-                    
+                    </div>
                 </div>
 
                 <button type="submit">Reservar</button>
