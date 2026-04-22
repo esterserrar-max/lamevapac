@@ -35,7 +35,18 @@
 
     <main>
         <div class="img-fons-2">
-            <h1 class="titol-enllac">Enllaços <br>de <br> referència</h1>
+            <h1 class="titol-enllac">Enllaços <br>de <br> Referència</h1>
+             <picture class="hero-detall2">
+                <!-- Desktop: Foto panoràmica -->
+                <source media="(min-width: 1024px)"
+                    srcset="./img/fondo-menu.jpg?width=1200&height=300&fit=cover&as=avif">
+                <!-- Tablet: Foto més quadrada -->
+                <source media="(min-width: 600px)"
+                    srcset="./img/fondo-menu.jpg?width=800&height=300&fit=cover&as=webp">
+                <!-- Mòbil: Foto vertical perquè es vegin bé els ingredients -->
+                <img src="./img/fondo-menu.jpg?width=450&height=300&fit=cover&as=webp"
+                    alt="Imatge de fons de decoració amb tons de fusta.">
+            </picture>
         </div>
 
         <hr>

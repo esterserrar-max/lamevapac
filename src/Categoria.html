@@ -37,12 +37,25 @@
     <main class="font">
 
 
-        <div class="img-fons"></div>
+        <div class="img-fons">
+            <picture class="hero-detall">
+                <!-- Desktop: Foto panoràmica -->
+                <source media="(min-width: 1024px)"
+                    srcset="./img/restuarant-intrior.jpg?width=1200&height=700&fit=cover&as=avif">
+                <!-- Tablet: Foto més quadrada -->
+                <source media="(min-width: 600px)"
+                    srcset="./img/restuarant-intrior.jpg?width=800&height=600&fit=cover&as=webp">
+                <!-- Mòbil: Foto vertical perquè es vegin bé els ingredients -->
+                <img src="./img/restuarant-intrior.jpg?width=450&height=600&fit=cover&as=webp"
+                    alt="Sala interior del restauarant">
+            </picture>
+
+        </div>
 
         <h1 class="titol-nosaltres">Sobre Nosaltres</h1>
         <hr>
 
-        <section class="presentacio">
+        <section class="presentacion">
             <h2>Qui som?</h2>
             <p>El Little Italy som un restaurant d'estil de cuina tradicional italiana. La nostra especialitat són les
                 pizzes d'estil napolità. Els nostres vesavis van obrir el restaurant "La nostra Pizza" a l'any 1950 a la

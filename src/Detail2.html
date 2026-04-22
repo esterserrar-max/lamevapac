@@ -36,6 +36,19 @@
 
     <main>
         <div class="img-fons-2">
+        
+            <picture class="hero-detall2">
+                <!-- Desktop: Foto panoràmica -->
+                <source media="(min-width: 1024px)"
+                    srcset="./img/fondo-menu.jpg?width=1200&height=300&fit=cover&as=avif">
+                <!-- Tablet: Foto més quadrada -->
+                <source media="(min-width: 600px)"
+                    srcset="./img/fondo-menu.jpg?width=800&height=300&fit=cover&as=webp">
+                <!-- Mòbil: Foto vertical perquè es vegin bé els ingredients -->
+                <img src="./img/fondo-menu.jpg?width=450&height=300&fit=cover&as=webp"
+                    alt="Imatge de fons de decoració amb tons de fusta.">
+            </picture>
+
             <h1 class="titol-blog">El Blog <br>del <br>Little Italy</h1>
         </div>
 
