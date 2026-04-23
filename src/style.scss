@@ -60,6 +60,24 @@ footer {
   width: 100%;
   background-color: $secondary-color;
 }
+/*Saltar navegació*/
+.skip-link {
+  position: absolute;
+  top: -100px; /* Amagat fora de la pantalla */
+  left: 0;
+  background: $third-color;
+  color: white;
+  padding: 10px;
+  z-index: 2000;
+  transition: top 0.3s;
+
+  &:focus {
+    top: 0; /* Apareix quan l'usuari prem Tab */
+    outline: none;
+    text-decoration: none;
+  }
+}
+
 
 /*-------------------*/
 /* Estil del footer */
