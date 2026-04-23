@@ -20,7 +20,9 @@
     <header>
         <nav class="menu-principal" aria-label="Navegació principal">
             <a href="index.html">
-                <img src="img/logoLI.png" alt="Logo del restaurant Little Italy" class="img-menu-principal">
+                <img src="img/logoLI.png?width=120" srcset="img/logoLI.png?as=webp&width=60 1x, 
+                 img/logoLI.png?as=webp&width=120 2x" alt="Logo del restaurant Little Italy"
+                    class="img-menu-principal">
             </a>
 
             <button class="hamburguesa" aria-label="Mostra el menú"> &#9776;</button>
@@ -36,16 +38,21 @@
     <main>
         <div class="img-fons-2">
             <h1 class="titol-enllac">Enllaços <br>de <br> Referència</h1>
-             <picture class="hero-detall2">
+            <picture class="hero-detall2">
                 <!-- Desktop: Foto panoràmica -->
                 <source media="(min-width: 1024px)"
-                    srcset="./img/fondo-menu.jpg?width=1200&height=300&fit=cover&as=avif">
+                    srcset="./img/fondo-menu.jpg?width=1200&height=300&fit=cover&as=avif" type="image/avif">
+                <source media="(min-width: 1024px)"
+                    srcset="./img/fondo-menu.jpg?width=1200&height=300&fit=cover&as=webp" type="image/webp">
                 <!-- Tablet: Foto més quadrada -->
-                <source media="(min-width: 600px)"
-                    srcset="./img/fondo-menu.jpg?width=800&height=300&fit=cover&as=webp">
+                <source media="(min-width: 600px)" srcset="./img/fondo-menu.jpg?width=800&height=300&fit=cover&as=avif"
+                    type="image/avif">
+                <source media="(min-width: 600px)" srcset="./img/fondo-menu.jpg?width=800&height=300&fit=cover&as=webp"
+                    type="image/webp">
                 <!-- Mòbil: Foto vertical perquè es vegin bé els ingredients -->
+                <source srcset="./img/fondo-menu.jpg?width=450&height=300&fit=cover&as=avif" type="image/avif">
                 <img src="./img/fondo-menu.jpg?width=450&height=300&fit=cover&as=webp"
-                    alt="Imatge de fons de decoració amb tons de fusta.">
+                    alt="Imatge de fons de decoració amb tons de fusta." loading="eager">
             </picture>
         </div>
 
@@ -69,19 +76,19 @@
                 <p>El logo del restaurant ha estat generat amb ChatGPT:</p>
 
                 <p>OpenAI. (2026). ChatGPT:
-                    <a href="https://openai.com" target="_blank" rel="noopener noreferrer">
+                    <a class="link-transicio" href="https://openai.com" target="_blank" rel="noopener noreferrer">
                         https://openai.com
                     </a>. (Consultat el <time datetime=2026-03-05>5/03/2025</time>).
                 </p>
 
                 <p>Pexels:
-                    <a href="https://www.pexels.com/" target="_blank" rel="noopener noreferrer">
+                    <a class="link-transicio" href="https://www.pexels.com/" target="_blank" rel="noopener noreferrer">
                         https://www.pexels.com/
                     </a>. (Consultat des del <time datetime=2026-03-05>5/03/2025 fins al 16/03/2025</time>).
                 </p>
 
                 <p>Unsplash:
-                    <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer">
+                    <a class="link-transicio" href="https://unsplash.com" target="_blank" rel="noopener noreferrer">
                         https://unsplash.com
                     </a>. (Consultat des del <time datetime=2026-03-05> 05/03/2026fins al 16/03/2026</time>).
                 </p>
@@ -94,7 +101,7 @@
                 <ul>
                     <li>
                         Viquipèdia (Febrer 2026):
-                        <a href="https://ca.wikipedia.org/wiki/Pizza_napolitana" target="_blank"
+                        <a class="link-transicio" href="https://ca.wikipedia.org/wiki/Pizza_napolitana" target="_blank"
                             rel="noopener noreferrer">
                             Pizza napolitana
                         </a>.
@@ -103,23 +110,25 @@
 
                     <li>
                         Associazione Verace Pizza Napoletana:
-                        <a href="https://www.pizzanapoletana.org/es/" target="_blank" rel="noopener noreferrer">
+                        <a class="link-transicio" href="https://www.pizzanapoletana.org/es/" target="_blank" rel="noopener noreferrer">
                             Web oficial
                         </a>.
                         (Consultat el <time datetime="2026-03-10">10/03/2026</time>)
                     </li>
 
                     <li>
-                        Papá Felice- Sabor de Italia (2024). Pizza Napolitana Paso a Paso. ¡Lista en 3 Horas! [Vídeo]. Youtube.
-                        <a href="https://www.youtube.com/watch?v=vPqPKr3aXjM" target="_blank" rel="noopener noreferrer">
+                        Papá Felice- Sabor de Italia (2024). Pizza Napolitana Paso a Paso. ¡Lista en 3 Horas! [Vídeo].
+                        Youtube.
+                        <a class="link-transicio" href="https://www.youtube.com/watch?v=vPqPKr3aXjM" target="_blank" rel="noopener noreferrer">
                             Veure vídeo
                         </a>.
                         (Consultat el <time datetime="2026-03-10">10/03/2026</time>)
                     </li>
 
                     <li>
-                        elcocinerofiel (4 de Decembre del 2025). NAPLES: Neapolitan cuisine and a visit to Pepe In Grani [Vídeo]. Youtube.
-                        <a href="https://www.youtube.com/watch?v=uTFYGK5nkcs&t=14s" target="_blank"
+                        elcocinerofiel (4 de Decembre del 2025). NAPLES: Neapolitan cuisine and a visit to Pepe In Grani
+                        [Vídeo]. Youtube.
+                        <a class="link-transicio" href="https://www.youtube.com/watch?v=uTFYGK5nkcs&t=14s" target="_blank"
                             rel="noopener noreferrer">
                             Veure vídeo
                         </a>.
@@ -128,7 +137,7 @@
 
                     <li>
                         Google Gemini (versió 1.5 Flash):
-                        <a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer">
+                        <a class="link-transicio" href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer">
                             Web oficial
                         </a>.
                         (Consultat el <time datetime="2026-03-22">22/03/2026</time>)
@@ -136,7 +145,7 @@
 
                     <li>
                         W3Schools - Mobile Navigation Menu:
-                        <a href="https://www.w3schools.com/howto/howto_js_mobile_navbar.asp" target="_blank"
+                        <a class="link-transicio" href="https://www.w3schools.com/howto/howto_js_mobile_navbar.asp" target="_blank"
                             rel="noopener noreferrer">
                             Tutorial
                         </a>.
@@ -145,7 +154,7 @@
 
                     <li>
                         DEV - Responsive navbar:
-                        <a href="https://dev.to/devggaurav/let-s-build-a-responsive-navbar-and-hamburger-menu-using-html-css-and-javascript-4gci?"
+                        <a class="link-transicio" href="https://dev.to/devggaurav/let-s-build-a-responsive-navbar-and-hamburger-menu-using-html-css-and-javascript-4gci?"
                             target="_blank" rel="noopener noreferrer">
                             Article
                         </a>.
@@ -161,7 +170,7 @@
                 <ul>
                     <li>
                         WebAIM Contrast Checker:
-                        <a href="https://webaim.org/resources/contrastchecker/?fcolor=0000FF&bcolor=FFFFFF"
+                        <a class="link-transicio" href="https://webaim.org/resources/contrastchecker/?fcolor=0000FF&bcolor=FFFFFF"
                             target="_blank" rel="noopener noreferrer">
                             Eina de contrast
                         </a>.
@@ -171,7 +180,7 @@
 
                     <li>
                         W3C Validator HTML:
-                        <a href="https://validator.w3.org/" target="_blank" rel="noopener noreferrer">
+                        <a class="link-transicio" href="https://validator.w3.org/" target="_blank" rel="noopener noreferrer">
                             Validador HTML
                         </a>.
                         (Consultat des del <time datetime="2026-03-07">07/03/2026</time>)
@@ -179,14 +188,14 @@
 
                     <li>
                         W3C Validator CSS:
-                        <a href="https://jigsaw.w3.org/css-validator/" target="_blank" rel="noopener noreferrer">
+                        <a class="link-transicio" href="https://jigsaw.w3.org/css-validator/" target="_blank" rel="noopener noreferrer">
                             Validador CSS
                         </a>.
                     </li>
 
                     <li>
                         HTML Color Codes:
-                        <a href="https://htmlcolorcodes.com/es/" target="_blank" rel="noopener noreferrer">
+                        <a class="link-transicio" href="https://htmlcolorcodes.com/es/" target="_blank" rel="noopener noreferrer">
                             Web de colors
                         </a>.
                         (Consultat del <time datetime="2026-03-06">06/03/2026</time> al <time
@@ -195,14 +204,14 @@
 
                     <li>
                         Alba, Enrique (2002):
-                        <a href="http://www.lcc.uma.es/~eat/pdf/sw-spanish.pdf" target="_blank"
+                        <a class="link-transicio" href="http://www.lcc.uma.es/~eat/pdf/sw-spanish.pdf" target="_blank"
                             rel="noopener noreferrer">
                             Document tècnic
                         </a>.
                         (Consultat el <time datetime="2026-03-16">16/03/2026</time>)
                     </li>
                     <li>W3Schools:
-                        <a href="https://www.w3.org/WAI/WCAG22/quickref/?versions=2.1#link-purpose-in-context"
+                        <a class="link-transicio" href="https://www.w3.org/WAI/WCAG22/quickref/?versions=2.1#link-purpose-in-context"
                             target="_blank" rel="noopener noreferrer">
                             How to Meet WCAG (Quick Reference)
                         </a>.
@@ -221,7 +230,7 @@
             <nav class="footer-informació" aria-label="Informació del lloc">
                 <p>Nosaltres</p>
                 <ul>
-                   <li><a href="Categoria.html">Sobre nosaltres</a></li>
+                    <li><a href="Categoria.html">Sobre nosaltres</a></li>
                     <li><a href="Categoria.html#contact">Contacte</a></li>
                 </ul>
             </nav>

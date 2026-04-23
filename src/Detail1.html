@@ -18,13 +18,15 @@
 
 <body>
     <header>
-       <nav class="menu-principal" aria-label="Navegació principal">
+        <nav class="menu-principal" aria-label="Navegació principal">
             <a href="index.html">
-                <img src="img/logoLI.png" alt="Logo del restaurant Little Italy" class="img-menu-principal">
+                <img src="img/logoLI.png?width=120" srcset="img/logoLI.png?as=webp&width=60 1x, 
+                 img/logoLI.png?as=webp&width=120 2x" alt="Logo del restaurant Little Italy"
+                    class="img-menu-principal">
             </a>
 
-           <button class="hamburguesa" aria-label="Mostra el menú"> &#9776;</button>
-           <ul id="myLinks" class="enllaços-menu-principal">
+            <button class="hamburguesa" aria-label="Mostra el menú"> &#9776;</button>
+            <ul id="myLinks" class="enllaços-menu-principal">
                 <li><a href="Categoria.html">Sobre Nosaltres</a></li>
                 <li><a href="Detail1.html">La Carta</a></li>
                 <li><a href="Detail2.html">Blog</a></li>
@@ -37,14 +39,19 @@
 
         <div class="img-fons-1">
             <picture class="hero-detall1">
-                <source media="(min-width: 1024px)"
-                    srcset="./img/Lacarta.jpg?width=1200&height=800&fit=cover&as=avif">
-                
-                <source media="(min-width: 600px)"
-                    srcset="./img/Lacarta.jpg?width=800&height=600&fit=cover&as=webp">
+
+                <source media="(min-width: 1024px)" srcset="./img/Lacarta.jpg?width=1200&height=800&fit=cover&as=avif"
+                    type="image/avif">
+                <source media="(min-width: 1024px)" srcset="./img/Lacarta.jpg?width=1200&height=800&fit=cover&as=webp"
+                    type="image/webp">
+                <!-- Tablet: Foto més quadrada -->
+                <source media="(min-width: 600px)" srcset="./img/Lacarta.jpg?width=800&height=600&fit=cover&as=avif"
+                    type="image/avif">
+                <source media="(min-width: 600px)" srcset="./img/Lacarta.jpg?width=800&height=600&fit=cover&as=webp">
                 <!-- Mòbil: Foto vertical perquè es vegin bé els ingredients -->
-                <img src="./img/Lacarta.jpg?width=450&height=300&fit=cover&as=webp"
-                    alt="Sala interior del restauarant">
+                <source srcset="./img/Lacarta.jpg?width=450&height=300&fit=cover&as=avif" type="image/avif">
+                <img src="./img/Lacarta.jpg?width=450&height=300&fit=cover&as=webp" alt="Sala interior del restauarant"
+                    loading="eager">
             </picture>
         </div>
 
@@ -68,7 +75,23 @@
 
                     <div class="image-categoria">
                         <figure>
-                            <img class="img-carta" src="img/diavola.jpg" alt="Pizza Diavola">
+                            <picture>
+                                <!-- Variants en format AVIF -->
+                                <source type="image/avif" srcset="./img/diavola.jpg?as=avif&width=400 400w, 
+                    ./img/diavola.jpg?as=avif&width=800 800w, 
+                    ./img/diavola.jpg?as=avif&width=1200 1200w"
+                                    sizes="(max-width: 600px) 400px, (max-width: 1024px) 800px, 1200px">
+
+                                <!-- Variants en format WebP  -->
+                                <source type="image/webp" srcset="./img/diavola.jpg?as=webp&width=400 400w, 
+                    ./img/diavola.jpg?as=webp&width=800 800w, 
+                    ./img/diavola.jpg?as=webp&width=1200 1200w"
+                                    sizes="(max-width: 600px) 400px, (max-width: 1024px) 800px, 1200px">
+
+                                <!-- Fallback -->
+                                <img class="img-carta" src="./img/diavola.jpg?width=800"
+                                    alt="Fotografia de la pizza Diavola" loading="lazy">
+                            </picture>
                             <figcaption class="comentari-pizza">Pizza Diavola. Una de les pizzes més destacades de la
                                 carta.</figcaption>
                         </figure>
@@ -287,12 +310,28 @@
 
                 <details>
                     <summary>
-                       <h2>Pizzes blanques <span class="fletxa">&#9654;</span></h2>
+                        <h2>Pizzes blanques <span class="fletxa">&#9654;</span></h2>
                     </summary>
 
                     <div class="image-categoria">
                         <figure>
-                            <img class="img-carta" src="img/pizza-blanca.jpg" alt="Pizza blanca">
+                            <picture>
+                                <!-- Variants en format AVIF -->
+                                <source type="image/avif" srcset="./img/pizza-blanca.jpg?as=avif&width=400 400w, 
+                    ./img/pizza-blanca.jpg?as=avif&width=800 800w, 
+                    ./img/pizza-blanca.jpg?as=avif&width=1200 1200w"
+                                    sizes="(max-width: 600px) 400px, (max-width: 1024px) 800px, 1200px">
+
+                                <!-- Variants en format WebP  -->
+                                <source type="image/webp" srcset="./img/pizza-blanca.jpg?as=webp&width=400 400w, 
+                    ./img/pizza-blanca.jpg?as=webp&width=800 800w, 
+                    ./img/pizza-blanca.jpg?as=webp&width=1200 1200w"
+                                    sizes="(max-width: 600px) 400px, (max-width: 1024px) 800px, 1200px">
+
+                                <!-- Fallback -->
+                                <img class="img-carta" src="./img/pizza-blanca.jpg?width=800"
+                                    alt="Fotografia de la pizza Quatra formatges" loading="lazy">
+                            </picture>
                             <figcaption class="comentari-pizza">Pizza Quatre formatges.</figcaption>
                         </figure>
                     </div>
@@ -369,11 +408,27 @@
             <section class="plats-section">
                 <details>
                     <summary>
-                       <h2>Postres casolans <span class="fletxa">&#9654;</span></h2>
+                        <h2>Postres casolans <span class="fletxa">&#9654;</span></h2>
                     </summary>
                     <div class="image-categoria">
                         <figure>
-                            <img class="img-carta" src="img/tiramisu.jpg" alt="Tiramisú">
+                            <picture>
+                                <!-- Variants en format AVIF -->
+                                <source type="image/avif" srcset="./img/tiramisu.jpg?as=avif&width=400 400w, 
+                    ./img/tiramisu.jpg?as=avif&width=800 800w, 
+                    ./img/tiramisu.jpg?as=avif&width=1200 1200w"
+                                    sizes="(max-width: 600px) 400px, (max-width: 1024px) 800px, 1200px">
+
+                                <!-- Variants en format WebP  -->
+                                <source type="image/webp" srcset="./img/tiramisu.jpg?as=webp&width=400 400w, 
+                    ./img/tiramisu.jpg?as=webp&width=800 800w, 
+                    ./img/tiramisu.jpg?as=webp&width=1200 1200w"
+                                    sizes="(max-width: 600px) 400px, (max-width: 1024px) 800px, 1200px">
+
+                                <!-- Fallback -->
+                                <img class="img-carta" src="./img/tiramisu.jpg?width=800"
+                                    alt="Fotografia del postre de tiramisú de la casa" loading="lazy">
+                            </picture>
                             <figcaption class="comentari-pizza">El tiramisú de la casa</figcaption>
                         </figure>
                     </div>
@@ -414,7 +469,7 @@
             <section class="plats-section">
                 <details>
                     <summary>
-                       <h2>Begudes<span class="fletxa">&#9654;</span></h2> 
+                        <h2>Begudes<span class="fletxa">&#9654;</span></h2>
                     </summary>
                     <ul class="plats">
                         <li>

@@ -21,7 +21,9 @@
     <header>
         <nav class="menu-principal" aria-label="Navegació principal">
             <a href="index.html">
-                <img src="img/logoLI.png" alt="Logo del restaurant Little Italy" class="img-menu-principal">
+                <img src="img/logoLI.png?width=120" srcset="img/logoLI.png?as=webp&width=60 1x, 
+                 img/logoLI.png?as=webp&width=120 2x" alt="Logo del restaurant Little Italy"
+                    class="img-menu-principal">
             </a>
 
             <button class="hamburguesa" aria-label="Mostra el menú"> &#9776;</button>
@@ -36,17 +38,22 @@
 
     <main>
         <div class="img-fons-2">
-        
+
             <picture class="hero-detall2">
                 <!-- Desktop: Foto panoràmica -->
                 <source media="(min-width: 1024px)"
-                    srcset="./img/fondo-menu.jpg?width=1200&height=300&fit=cover&as=avif">
+                    srcset="./img/fondo-menu.jpg?width=1200&height=300&fit=cover&as=avif" type="image/avif">
+                <source media="(min-width: 1024px)"
+                    srcset="./img/fondo-menu.jpg?width=1200&height=300&fit=cover&as=webp" type="image/webp">
                 <!-- Tablet: Foto més quadrada -->
-                <source media="(min-width: 600px)"
-                    srcset="./img/fondo-menu.jpg?width=800&height=300&fit=cover&as=webp">
+                <source media="(min-width: 600px)" srcset="./img/fondo-menu.jpg?width=800&height=300&fit=cover&as=avif"
+                    type="image/avif">
+                <source media="(min-width: 600px)" srcset="./img/fondo-menu.jpg?width=800&height=300&fit=cover&as=webp"
+                    type="image/webp">
                 <!-- Mòbil: Foto vertical perquè es vegin bé els ingredients -->
+                <source srcset="./img/fondo-menu.jpg?width=450&height=300&fit=cover&as=avif" type="image/avif">
                 <img src="./img/fondo-menu.jpg?width=450&height=300&fit=cover&as=webp"
-                    alt="Imatge de fons de decoració amb tons de fusta.">
+                    alt="Imatge de fons de decoració amb tons de fusta." loading="eager">
             </picture>
 
             <h1 class="titol-blog">El Blog <br>del <br>Little Italy</h1>
@@ -83,7 +90,23 @@
             </p>
             <div class="image-blog">
                 <figure>
-                    <img class="blog" src="img/pizzacrua.jpg" alt="Pizzer preparant una pizza">
+                    <picture>
+                        <!-- Variants en format AVIF -->
+                        <source type="image/avif" srcset="./img/pizzacrua.jpg?as=avif&width=400 400w, 
+                    ./img/pizzacrua.jpg?as=avif&width=800 800w, 
+                    ./img/pizzacrua.jpg?as=avif&width=1200 1200w"
+                            sizes="(max-width: 600px) 400px, (max-width: 1024px) 800px, 1200px">
+
+                        <!-- Variants en format WebP  -->
+                        <source type="image/webp" srcset="./img/pizzacrua.jpg?as=webp&width=400 400w, 
+                    ./img/pizzacrua.jpg?as=webp&width=800 800w, 
+                    ./img/pizzacrua.jpg?as=webp&width=1200 1200w"
+                            sizes="(max-width: 600px) 400px, (max-width: 1024px) 800px, 1200px">
+
+                        <!-- Fallback -->
+                        <img class="blog" src="./img/pizzacrua.jpg?width=800"
+                            alt="Fotografia d'un dels nostres pizzers preparant una pizza" loading="lazy">
+                    </picture>
                     <figcaption class="comentari-image">Un dels nostres pizzers preparant una pizza</figcaption>
                 </figure>
             </div>
@@ -114,7 +137,24 @@
             </ul>
             <div class="image-blog">
                 <figure>
-                    <img class="blog" src="img/pizza-classica.jpg" alt="Pizzes tradicionals">
+                    <picture>
+                        <!-- Variants en format AVIF -->
+                        <source type="image/avif" srcset="./img/pizza-classica.jpg?as=avif&width=400 400w, 
+                    ./img/pizza-classica.jpg?as=avif&width=800 800w, 
+                    ./img/pizza-classica.jpg?as=avif&width=1200 1200w"
+                            sizes="(max-width: 600px) 400px, (max-width: 1024px) 800px, 1200px">
+
+                        <!-- Variants en format WebP  -->
+                        <source type="image/webp" srcset="./img/pizza-classica.jpg?as=webp&width=400 400w, 
+                    ./img/pizza-classica.jpg?as=webp&width=800 800w, 
+                    ./img/pizza-classica.jpg?as=webp&width=1200 1200w"
+                            sizes="(max-width: 600px) 400px, (max-width: 1024px) 800px, 1200px">
+
+                        <!-- Fallback -->
+                        <img class="blog" src="./img/pizza-classica.jpg?width=800"
+                            alt="Fotografia de dues pizzes. La Margarita a l'esquerra i a la dreta la Marinara"
+                            loading="lazy">
+                    </picture>
                     <figcaption class="comentari-image">Pizzes Margarita i Marinara</figcaption>
                 </figure>
             </div>
@@ -136,12 +176,29 @@
             <p>Així doncs, us compartim la seva pàgina web on podreu veure que pertanyem, participem i produim pizzes
                 tradicionals napolitanes. També, veureu que ofereixen informació sobre l'associació, receptes, cursos,
                 entre d'altres.
-                El link de la web és el següent: <a href="https://www.pizzanapoletana.org/es/" 
-                    target="_blank" rel="noopener noreferrer">Associazione Verace Pizza Napoletana</a>
+                El link de la web és el següent: <a href="https://www.pizzanapoletana.org/es/" target="_blank"
+                    rel="noopener noreferrer">Associazione Verace Pizza Napoletana</a>
             </p>
             <div class="image-blog">
                 <figure>
-                    <img class="blog" src="img/VerapizzaAss.png" alt="Logo de l'Associació Verace Pizza Napoletana">
+                    <picture>
+                        <!-- Variants en format AVIF -->
+                        <source type="image/avif" srcset="./img/VerapizzaAss.png?as=avif&width=400 400w, 
+                    ./img/VerapizzaAss.png?as=avif&width=800 800w, 
+                    ./img/VerapizzaAss.png?as=avif&width=1200 1200w"
+                            sizes="(max-width: 600px) 400px, (max-width: 1024px) 800px, 1200px">
+
+                        <!-- Variants en format WebP  -->
+                        <source type="image/webp" srcset="./img/VerapizzaAss.png?as=webp&width=400 400w, 
+                    ./img/VerapizzaAss.png?as=webp&width=800 800w, 
+                    ./img/VerapizzaAss.png?as=webp&width=1200 1200w"
+                            sizes="(max-width: 600px) 400px, (max-width: 1024px) 800px, 1200px">
+
+                        <!-- Fallback -->
+                        <img class="blog" src="./img/VerapizzaAss.png?width=800"
+                            alt="Fotografia del logo de la Associació Verace Pizza Napoletana" loading="lazy">
+                    </picture>
+
                     <figcaption class="comentari-image"> Logo de la Associació Verace Pizza Napoletana.</figcaption>
                 </figure>
             </div>

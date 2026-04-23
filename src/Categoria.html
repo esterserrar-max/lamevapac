@@ -21,7 +21,9 @@
     <header>
         <nav class="menu-principal" aria-label="Navegació principal">
             <a href="index.html">
-                <img src="img/logoLI.png" alt="Logo del restaurant Little Italy" class="img-menu-principal">
+                <img src="img/logoLI.png?width=120" srcset="img/logoLI.png?as=webp&width=60 1x, 
+                 img/logoLI.png?as=webp&width=120 2x" alt="Logo del restaurant Little Italy"
+                    class="img-menu-principal">
             </a>
 
             <button class="hamburguesa" aria-label="Mostra el menú"> &#9776;</button>
@@ -39,15 +41,20 @@
 
         <div class="img-fons">
             <picture class="hero-detall">
-                <!-- Desktop: Foto panoràmica -->
+                <!-- Desktop -->
                 <source media="(min-width: 1024px)"
-                    srcset="./img/restuarant-intrior.jpg?width=1200&height=700&fit=cover&as=avif">
-                <!-- Tablet: Foto més quadrada -->
+                    srcset="./img/restuarant-intrior.jpg?width=1200&height=700&fit=cover&as=avif" type="image/avif">
+                <source media="(min-width: 1024px)"
+                    srcset="./img/restuarant-intrior.jpg?width=1200&height=700&fit=cover&as=webp" type="image/webp">
+                <!-- Tablet -->
                 <source media="(min-width: 600px)"
-                    srcset="./img/restuarant-intrior.jpg?width=800&height=600&fit=cover&as=webp">
-                <!-- Mòbil: Foto vertical perquè es vegin bé els ingredients -->
+                    srcset="./img/restuarant-intrior.jpg?width=800&height=600&fit=cover&as=avif" type="image/avif">
+                <source media="(min-width: 600px)"
+                    srcset="./img/restuarant-intrior.jpg?width=800&height=600&fit=cover&as=webp" type="image/webp">
+                <!-- Mòbil -->
+                <source srcset="./img/restuarant-intrior.jpg?width=450&height=600&as=avif" type="image/avif">
                 <img src="./img/restuarant-intrior.jpg?width=450&height=600&fit=cover&as=webp"
-                    alt="Sala interior del restauarant">
+                    alt="Sala interior del restauarant" loading="eager">
             </picture>
 
         </div>
@@ -70,10 +77,25 @@
 
             <div class="img">
                 <figure>
-                    <img class="img-nosaltres" src="img/napoli.jpg" alt="Castel dell’Ovo a Nàpols">
+                    <picture>
+                        <!-- Variants en format AVIF -->
+                        <source type="image/avif" srcset="./img/napoli.jpg?as=avif&width=400 400w, 
+                    ./img/napoli.jpg?as=avif&width=800 800w, 
+                    ./img/napoli.jpg?as=avif&width=1200 1200w"
+                            sizes="(max-width: 600px) 400px, (max-width: 1024px) 800px, 1200px">
+
+                        <!-- Variants en format WebP  -->
+                        <source type="image/webp" srcset="./img/napoli.jpg?as=webp&width=400 400w, 
+                    ./img/napoli.jpg?as=webp&width=800 800w, 
+                    ./img/napoli.jpg?as=webp&width=1200 1200w"
+                            sizes="(max-width: 600px) 400px, (max-width: 1024px) 800px, 1200px">
+
+                        <!-- Fallback -->
+                        <img class="img-nosaltres" src="./img/napoli.jpg?width=800"
+                            alt="Castel dell’Ovo de la ciutat de Nàpols" loading="lazy">
+                    </picture>
                     <figcaption class="comentari-img">Castel dell'Ovo, Nàpols.</figcaption>
                 </figure>
-
             </div>
         </section>
 
@@ -87,7 +109,24 @@
 
             <div class="img">
                 <figure>
-                    <img class="img-nosaltres" src="img/vespa.jpg" alt="Motos de la marca italiana Vespa">
+                    <picture>
+                        <!-- Variants en format AVIF -->
+                        <source type="image/avif" srcset="./img/vespa.jpg?as=avif&width=400 400w, 
+                    ./img/vespa.jpg?as=avif&width=800 800w, 
+                    ./img/vespa.jpg?as=avif&width=1200 1200w"
+                            sizes="(max-width: 600px) 400px, (max-width: 1024px) 800px, 1200px">
+
+                        <!-- Variants en format WebP  -->
+                        <source type="image/webp" srcset="./img/vespa.jpg?as=webp&width=400 400w, 
+                    ./img/vespa.jpg?as=webp&width=800 800w, 
+                    ./img/vespa.jpg?as=webp&width=1200 1200w"
+                            sizes="(max-width: 600px) 400px, (max-width: 1024px) 800px, 1200px">
+
+                        <!-- Fallback -->
+                        <img class="img-nosaltres" src="./img/vespa.jpg?width=800"
+                            alt="Vespa, és la moto italiana iconica del país" loading="lazy">
+                    </picture>
+
                     <figcaption class="comentari-img">Motos de la iconònica marca italiana Vespa</figcaption>
                 </figure>
             </div>
@@ -109,7 +148,23 @@
                 </li>
             </ul>
             <div class="img">
-                <img class="img-nosaltres" src="img/horari.jpg" alt="Castel dell’Ovo a Nàpols">
+                <picture>
+                    <!-- Variants en format AVIF -->
+                    <source type="image/avif" srcset="./img/horari.jpg?as=avif&width=400 400w, 
+                    ./img/horari.jpg?as=avif&width=800 800w, 
+                    ./img/horari.jpg?as=avif&width=1200 1200w"
+                        sizes="(max-width: 600px) 400px, (max-width: 1024px) 800px, 1200px">
+
+                    <!-- Variants en format WebP  -->
+                    <source type="image/webp" srcset="./img/horari.jpg?as=webp&width=400 400w, 
+                    ./img/horari.jpg?as=webp&width=800 800w, 
+                    ./img/horari.jpg?as=webp&width=1200 1200w"
+                        sizes="(max-width: 600px) 400px, (max-width: 1024px) 800px, 1200px">
+
+                    <!-- Fallback -->
+                    <img class="img-nosaltres" src="./img/horari.jpg?width=800"
+                        alt="Imatge d'un rellotge penjat en una paret blanca" loading="lazy">
+                </picture>
             </div>
         </section>
 
@@ -158,7 +213,23 @@
 
             <div class="img">
                 <figure>
-                    <img class="img-nosaltres" src="img/exteriorrestaurant.jpg" alt="Terrassa del restaurant">
+                    <picture>
+                        <!-- Variants en format AVIF -->
+                        <source type="image/avif" srcset="./img/exteriorrestaurant.jpg?as=avif&width=400 400w, 
+                    ./img/exteriorrestaurant.jpg?as=avif&width=800 800w, 
+                    ./img/exteriorrestaurant.jpg?as=avif&width=1200 1200w"
+                            sizes="(max-width: 600px) 400px, (max-width: 1024px) 800px, 1200px">
+
+                        <!-- Variants en format WebP  -->
+                        <source type="image/webp" srcset="./img/exteriorrestaurant.jpg?as=webp&width=400 400w, 
+                    ./img/exteriorrestaurant.jpg?as=webp&width=800 800w, 
+                    ./img/exteriorrestaurant.jpg?as=webp&width=1200 1200w"
+                            sizes="(max-width: 600px) 400px, (max-width: 1024px) 800px, 1200px">
+
+                        <!-- Fallback -->
+                        <img class="img-nosaltres" src="./img/exteriorrestaurant.jpg?width=800"
+                            alt="Vista de la terrassa exterior del restaurant a Barcelona" loading="lazy">
+                    </picture>
                     <figcaption class="comentari-img">Terrassa del restaurant a Barcelona</figcaption>
                 </figure>
             </div>
@@ -170,11 +241,27 @@
             <h2>On estem?</h2>
             <p>El nostre local es troba a la següent direcció:</p>
             <p><a href="https://www.google.com/maps/place/Carrer+dels+Banys,+56,+08530+La+Garriga,+Barcelona,+Espanya/@41.6821809,2.2834171,17z/data=!3m1!4b1!4m6!3m5!1s0x12a4c5943908aa89:0x35e15d7bbb9f516c!8m2!3d41.6821769!4d2.285992!16s%2Fg%2F11crwzjkvd?entry=ttu&g_ep=EgoyMDI2MDMxMC4wIKXMDSoASAFQAw%3D%3D"
-                    target="_blank" ref="noopener noreferrer">Carrer Banys 56, La Garriga (08530, Barcelona)</a> </p>
+                    target="_blank" rel="noopener noreferrer">Carrer Banys 56, La Garriga (08530, Barcelona)</a> </p>
 
 
             <div class="img">
-                <img class="img-nosaltres" src="img/onsom.jpg" alt="Castel dell’Ovo a Nàpols">
+                <picture>
+                    <!-- Variants en format AVIF -->
+                    <source type="image/avif" srcset="./img/onsom.jpg?as=avif&width=400 400w, 
+                    ./img/onsom.jpg?as=avif&width=800 800w, 
+                    ./img/onsom.jpg?as=avif&width=1200 1200w"
+                        sizes="(max-width: 600px) 400px, (max-width: 1024px) 800px, 1200px">
+
+                    <!-- Variants en format WebP  -->
+                    <source type="image/webp" srcset="./img/onsom.jpg?as=webp&width=400 400w, 
+                    ./img/onsom.jpg?as=webp&width=800 800w, 
+                    ./img/onsom.jpg?as=webp&width=1200 1200w"
+                        sizes="(max-width: 600px) 400px, (max-width: 1024px) 800px, 1200px">
+
+                    <!-- Fallback -->
+                    <img class="img-nosaltres" src="./img/onsom.jpg?width=800"
+                        alt="Mà amb una xinxeta de color vermella localitzant un lloc en un mapa" loading="lazy">
+                </picture>
             </div>
 
         </section>
@@ -189,7 +276,23 @@
                 </a></p>
 
             <div class="img">
-                <img class="img-nosaltres" src="img/contacte.jpg" alt="Castel dell’Ovo a Nàpols">
+                <picture>
+                    <!-- Variants en format AVIF -->
+                    <source type="image/avif" srcset="./img/contacte.jpg?as=avif&width=400 400w, 
+                    ./img/contacte.jpg?as=avif&width=800 800w, 
+                    ./img/contacte.jpg?as=avif&width=1200 1200w"
+                        sizes="(max-width: 600px) 400px, (max-width: 1024px) 800px, 1200px">
+
+                    <!-- Variants en format WebP  -->
+                    <source type="image/webp" srcset="./img/contacte.jpg?as=webp&width=400 400w, 
+                    ./img/contacte.jpg?as=webp&width=800 800w, 
+                    ./img/contacte.jpg?as=webp&width=1200 1200w"
+                        sizes="(max-width: 600px) 400px, (max-width: 1024px) 800px, 1200px">
+
+                    <!-- Fallback -->
+                    <img class="img-nosaltres" src="./img/contacte.jpg?width=800"
+                        alt="Imatge d'un telèfon antic de color negre" loading="lazy">
+                </picture>
             </div>
         </section>
 
