@@ -355,6 +355,7 @@ footer p {
   font-size: 1.2em;
   white-space: nowrap;
 }
+/*Animació dela icona del calendari de les reserves*/
 .calendari-animat {
   width: 40px;   /* Ajusta la mida al teu disseny */
   height: auto;
@@ -366,7 +367,6 @@ footer p {
   animation: balanceig-calendari 2s infinite alternate ease-in-out;
 }
 
-/*Animació dela icona del calendari de les reserves*/
 @keyframes balanceig-calendari {
   0% {
     transform: rotate(-3deg);
@@ -1044,7 +1044,7 @@ details[open] .fletxa {
   padding-top: 1.2em;
   padding-bottom: 1em;
 }
-
+/*Transició dels links*/
 .link-transicio {
   box-shadow: inset 0 0 0 0 #070707;
   color: #070707;
@@ -1054,7 +1054,7 @@ details[open] .fletxa {
 }
 
 .link-transicio:hover{
-  box-shadow: inset 200px 0 0 0 #080808;
+  box-shadow: inset 400px 0 0 0 #080808;
   color: white;
 }
 
@@ -1101,8 +1101,6 @@ details[open] .fletxa {
     gap: 3em;
   }
 }
-
-
 
 /* Smartphone grande */
 @media screen and (min-width: 700px) {
@@ -1206,10 +1204,8 @@ details[open] .fletxa {
 
   /* Imatges principals de cada pagina*/
   .home {
-    background-image: url('./img/hornopietra.jpg?width=1200&as=webp');
     min-height: 50vh;
     background-position: center top;
-   
   }
 
   .img-fons {
@@ -1384,8 +1380,6 @@ details[open] .fletxa {
     line-height: 1.5;
   }
 
-
-
   /* Estil de la Carta*/
 
   .informacio {
@@ -1498,6 +1492,7 @@ details[open] .fletxa {
   }
   
   .reserva p{
+    padding-top: 2em;
     font-size: 0.7em;
   }
 
