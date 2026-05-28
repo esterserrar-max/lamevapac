@@ -9,11 +9,14 @@
     <link rel="icon" type="image/png" href="img/favicon.png">
     <meta name="description" content="Pàgina Home del restaurant Little Italy">
 
-    <link rel="stylesheet" href="style.scss">
+    <link rel="stylesheet" href="style.scss" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="./css/estils.css"></noscript>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" &display=swap>
+    <link rel="preload" href="img/hornopietra.jpg" as="image" fetchpriority="high">
 </head>
 
 <body>
@@ -23,7 +26,9 @@
             <a href="index.html">
                 <img src="img/logoLI.png?width=120" srcset="img/logoLI.png?as=webp&width=60 1x, 
                  img/logoLI.png?as=webp&width=120 2x" alt="Logo del restaurant Little Italy"
-                    class="img-menu-principal">
+                    class="img-menu-principal"
+                    width="120"
+                    height="120">
             </a>
 
             <button class="hamburguesa" aria-label="Mostra el menú"> &#9776;</button>

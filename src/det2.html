@@ -9,7 +9,9 @@
     <link rel="icon" type="image/png" href="img/favicon.png">
     <meta name="description" content="Blog del restaurant Little Italy">
 
-    <link rel="stylesheet" href="style.scss">
+    <link rel="stylesheet" href="style.scss" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="./css/estils.css"></noscript>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
@@ -23,7 +25,9 @@
             <a href="index.html">
                 <img src="img/logoLI.png?width=120" srcset="img/logoLI.png?as=webp&width=60 1x, 
                  img/logoLI.png?as=webp&width=120 2x" alt="Logo del restaurant Little Italy"
-                    class="img-menu-principal">
+                    class="img-menu-principal"
+                    width="120"
+                    height="120">
             </a>
 
             <button class="hamburguesa" aria-label="Mostra el menú"> &#9776;</button>
@@ -53,7 +57,7 @@
                 <!-- Mòbil: Foto vertical perquè es vegin bé els ingredients -->
                 <source srcset="./img/fondo-menu.jpg?width=450&height=300&fit=cover&as=avif" type="image/avif">
                 <img src="./img/fondo-menu.jpg?width=450&height=300&fit=cover&as=webp"
-                    alt="" loading="eager">
+                    alt="" loading="eager" fetchpriority="high>
             </picture>
 
             <h1 class="titol-blog">El Blog <br>del <br>Little Italy</h1>
@@ -72,6 +76,7 @@
 
             <div class="video">
                 <iframe src="https://www.youtube.com/embed/vPqPKr3aXjM?si=YIA3Fgy1y2mNaVxh"
+                    loading="lazy"
                     title="Recepta pizza napolitana"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -237,7 +242,7 @@
         </div>
     </footer>
 
-    <script type="module" src="app.js"></script>
+    <script type="module" src="app.js" defer></script>
 </body>
 
 </html>

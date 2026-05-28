@@ -9,21 +9,23 @@
     <link rel="icon" type="image/png" href="img/favicon.png">
     <meta name="description" content="Carta del restaurant Little Italy">
 
-    <link rel="stylesheet" href="style.scss">
+    <link rel="stylesheet" href="style.scss" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="./css/estils.css"></noscript>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=NomDeLaTevaFont&display=swap" rel="stylesheet">
 </head>
 
 <body>
-     <a href="#main-content" class="skip-link" style="position: absolute; top: -100px;">Salta al contingut principal</a>
+    <a href="#main-content" class="skip-link" style="position: absolute; top: -100px;">Salta al contingut principal</a>
     <header>
         <nav class="menu-principal" aria-label="Navegació principal">
             <a href="index.html">
                 <img src="img/logoLI.png?width=120" srcset="img/logoLI.png?as=webp&width=60 1x, 
-                 img/logoLI.png?as=webp&width=120 2x" alt="Logo del restaurant Little Italy"
-                    class="img-menu-principal">
+                 img/logoLI.png?as=webp&width=120 2x" alt="Logo del restaurant Little Italy" class="img-menu-principal"
+                    width="120" height="120">
             </a>
 
             <button class="hamburguesa" aria-label="Mostra el menú"> &#9776;</button>
@@ -52,7 +54,7 @@
                 <!-- Mòbil: Foto vertical perquè es vegin bé els ingredients -->
                 <source srcset="./img/Lacarta.jpg?width=450&height=300&fit=cover&as=avif" type="image/avif">
                 <img src="./img/Lacarta.jpg?width=450&height=300&fit=cover&as=webp" alt="Sala interior del restauarant"
-                    loading="eager">
+                    loading="eager" fetchpriority="high">
             </picture>
         </div>
 
@@ -91,7 +93,10 @@
 
                                 <!-- Fallback -->
                                 <img class="img-carta" src="./img/diavola.jpg?width=800"
-                                    alt="Fotografia de la pizza Diavola" loading="lazy">
+                                    alt="Fotografia de la pizza Diavola" 
+                                    width="800"
+                                    height="450"
+                                    loading="lazy">
                             </picture>
                             <figcaption class="comentari-pizza">Pizza Diavola. Una de les pizzes més destacades de la
                                 carta.</figcaption>
@@ -331,7 +336,10 @@
 
                                 <!-- Fallback -->
                                 <img class="img-carta" src="./img/pizza-blanca.jpg?width=800"
-                                    alt="Fotografia de la pizza Quatra formatges" loading="lazy">
+                                    alt="Fotografia de la pizza Quatra formatges" 
+                                    width="800"
+                                    height="450"
+                                    loading="lazy">
                             </picture>
                             <figcaption class="comentari-pizza">Pizza Quatre formatges.</figcaption>
                         </figure>
@@ -428,7 +436,10 @@
 
                                 <!-- Fallback -->
                                 <img class="img-carta" src="./img/tiramisu.jpg?width=800"
-                                    alt="Fotografia del postre de tiramisú de la casa" loading="lazy">
+                                    alt="Fotografia del postre de tiramisú de la casa" 
+                                    width="800"
+                                    height="450"
+                                    loading="lazy">
                             </picture>
                             <figcaption class="comentari-pizza">El tiramisú de la casa</figcaption>
                         </figure>
@@ -541,7 +552,7 @@
         </div>
     </footer>
 
-    <script type="module" src="app.js"></script>
+    <script type="module" src="app.js" defer></script>
 </body>
 
 </html>
