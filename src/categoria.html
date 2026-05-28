@@ -8,12 +8,16 @@
     <link rel="icon" type="image/png" href="img/favicon.png">
     <meta name="description" content="Pàgina Home del restaurant Little Italy">
 
-    <!-- CSS Síncron net per evitar parpelleig i abaixar el CLS -->
-    <link rel="stylesheet" href="style.scss">
-
+    <!-- Optimització de connexió amb Google Fonts i YouTube per esgarrapar mil·lesegons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="dns-prefetch" href="https://www.youtube-nocookie.com">
+
+    <!-- CSS síncron i net -->
+    <link rel="stylesheet" href="style.scss">
+
+    <!-- Afegim font-display=swap per evitar el bloqueig de text (FCP) -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 </head>
 
 <body>
@@ -200,11 +204,17 @@
 
         <section class="consell">
             <h2>Pels clients curiosos</h2>
-            <p>Si mai aneu a Nàpols, us recomenem mirar el següent vídeo. Aquí trobareu diferents llocs on provar menjar tradicional a la ciutat de Nàpols. No sigueu tímids i pregunteu sobre recomancions d'on menjar, què veure, etc! Us ajudarem amb molt de gust!</p>
-            <p>Si us agrada fer receptes, en el <a href="det2.html#recepta-mensual"> Blog del Little Italay</a> trobareu receptes mensuals. Les receptes no nomes seran sobre cuina italiana sinó que seran de tot el món.</p>
+            <p>Si mai aneu a Nàpols, us recomenem mirar el següent vídeo. Aquí trobareu diferents llocs on provar menjar tradicional a la ciutat de Nàpols.</p>
+            <p>Si us agrada fer receptes, en el <a href="det2.html#recepta-mensual"> Blog del Little Italay</a> trobareu receptes mensuals.</p>
 
-            <div class="video">
-                <iframe src="https://www.youtube-nocookie.com/embed/uTFYGK5nkcs?si=2ImaaCEe3QlAe8lq" loading="lazy" title="Punts de menjar tradicions de Nàpols" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <!-- TRUC MESTRE DE PERFORMANCE: El iframe no té SRC inicial, evitant la descàrrega de JavaScript de YouTube bloquejant -->
+            <div class="video" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: #000;">
+                <iframe id="lazy-video" data-src="https://www.youtube-nocookie.com/embed/uTFYGK5nkcs?si=2ImaaCEe3QlAe8lq" 
+                    title="Punts de menjar tradicions de Nàpols" 
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen></iframe>
             </div>
         </section>
 
@@ -238,6 +248,17 @@
         </div>
     </footer>
 
+    <!-- SCRIPT DE CARREGA RETARDADA: Evita el bloqueig del telèfon -->
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                const video = document.getElementById('lazy-video');
+                if (video && video.getAttribute('data-src')) {
+                    video.setAttribute('src', video.getAttribute('data-src'));
+                }
+            }, 1500); // Retarda la càrrega del monstre de YouTube 1.5 segons
+        });
+    </script>
     <script type="module" src="app.js" defer></script>
 </body>
 </html>
