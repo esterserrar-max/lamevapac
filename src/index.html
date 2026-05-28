@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html lang="ca">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Little Italy</title>
     <link rel="icon" type="image/png" href="img/favicon.png">
     <meta name="description" content="Pàgina Home del restaurant Little Italy">
 
+    <!-- Connexió obligatòria de Sass per a Parcel -->
     <link rel="stylesheet" href="style.scss">
 
-    
+    <!-- 1. Connexió ràpida amb els servidors de Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-   
+    <!-- 2. Càrrega neta de Google Fonts (amb display=swap integrat de sèrie) -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    
+    <!-- 3. Doble Pre-càrrega de les dues variants físiques de Noto Sans que et demana el test per immunitzar el body de moure's (CLS) -->
     <link rel="preload" href="https://fonts.gstatic.com/s/notosans/v42/o-0bIpQlx30QXlEPyM25ws8.woff2" as="font" type="font/woff2" crossorigin>
-</head>
+    <link rel="preload" href="https://fonts.gstatic.com/s/notosans/v42/o-0ZIpQlx30QXlEPyM25ws8.woff2" as="font" type="font/woff2" crossorigin>
+
+    <link rel="preload" href="img/hornopietra.jpg?as=webp" as="image" type="image/webp" fetchpriority="high">
 </head>
 
 <body>
@@ -28,10 +29,14 @@
     <header>
         <nav class="menu-principal" aria-label="Navegació principal">
             <a href="index.html">
-                <img src="img/logoLI.png?width=120" srcset="img/logoLI.png?as=webp&width=60 1x, 
-                 img/logoLI.png?as=webp&width=120 2x" alt="Logo del restaurant Little Italy" class="img-menu-principal"
-                    width="120" height="120"
-                    style="width: 120px; height: 120px; aspect-ratio: 1 / 1; object-fit: contain;">
+                <!-- LOGO TOTALMENT BLINDAT EN ATRIBUT STYLE PERQUÈ PARCEL NO LI PROVOQUI REFLUIX -->
+                <img src="img/logoLI.png?width=120" 
+                     srcset="img/logoLI.png?as=webp&width=60 1x, img/logoLI.png?as=webp&width=120 2x" 
+                     alt="Logo del restaurant Little Italy" 
+                     class="img-menu-principal" 
+                     width="120" 
+                     height="120"
+                     style="width: 120px !important; height: 120px !important; aspect-ratio: 1 / 1 !important; object-fit: contain !important; display: block;">
             </a>
 
             <button class="hamburguesa" aria-label="Mostra el menú"> &#9776;</button>
