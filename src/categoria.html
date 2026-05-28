@@ -248,17 +248,38 @@
         </div>
     </footer>
 
-    <!-- SCRIPT DE CARREGA RETARDADA: Evita el bloqueig del telèfon -->
+   <!-- Evita que YouTube carregui fins que l'usuari hi arriba fent scroll -->
     <script>
         window.addEventListener('DOMContentLoaded', () => {
-            setTimeout(() => {
-                const video = document.getElementById('lazy-video');
-                if (video && video.getAttribute('data-src')) {
-                    video.setAttribute('src', video.getAttribute('data-src'));
-                }
-            }, 1500); // Retarda la càrrega del monstre de YouTube 1.5 segons
+            const videoElement = document.getElementById('lazy-video');
+            
+            if ('IntersectionObserver' in window && videoElement) {
+                const videoObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach((entry) => {
+                        // Si la secció del vídeo és visible a la pantalla (o a prop d'ella)
+                        if (entry.isIntersecting) {
+                            const lazyVideo = entry.target;
+                            if (lazyVideo.getAttribute('data-src')) {
+                                lazyVideo.setAttribute('src', lazyVideo.getAttribute('data-src'));
+                            }
+                            // Deixem d'observar un cop ja ha carregat
+                            observer.unobserve(lazyVideo);
+                        }
+                    });
+                }, {
+                    rootMargin: "0px 0px 300px 0px" // Comença a carregar-lo 300px abans que l'usuari hi arribi fent scroll
+                });
+                
+                videoObserver.observe(videoElement);
+            } else if (videoElement) {
+                // Alternativa de seguretat per navegadors molt antics
+                videoElement.setAttribute('src', videoElement.getAttribute('data-src'));
+            }
         });
     </script>
+    <script type="module" src="app.js" defer></script>
+</body>
+</html>
     <script type="module" src="app.js" defer></script>
 </body>
 </html>
