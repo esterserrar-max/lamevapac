@@ -7,20 +7,13 @@
     <link rel="icon" type="image/png" href="img/favicon.png">
     <meta name="description" content="Pàgina Home del restaurant Little Italy">
 
-    <!-- Connexió obligatòria de Sass per a Parcel -->
+ >
     <link rel="stylesheet" href="style.scss">
 
-    <!-- 1. Connexió ràpida amb els servidors de Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!-- 2. Càrrega neta de Google Fonts (amb display=swap integrat de sèrie) -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-    <!-- 3. Doble Pre-càrrega de les dues variants físiques de Noto Sans que et demana el test per immunitzar el body de moure's (CLS) -->
-    <link rel="preload" href="https://fonts.gstatic.com/s/notosans/v42/o-0bIpQlx30QXlEPyM25ws8.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="https://fonts.gstatic.com/s/notosans/v42/o-0ZIpQlx30QXlEPyM25ws8.woff2" as="font" type="font/woff2" crossorigin>
-
+    
     <link rel="preload" href="img/hornopietra.jpg?as=webp" as="image" type="image/webp" fetchpriority="high">
 </head>
 
@@ -29,7 +22,7 @@
     <header>
         <nav class="menu-principal" aria-label="Navegació principal">
             <a href="index.html">
-                <!-- LOGO TOTALMENT BLINDAT EN ATRIBUT STYLE PERQUÈ PARCEL NO LI PROVOQUI REFLUIX -->
+                
                 <img src="img/logoLI.png?width=120" 
                      srcset="img/logoLI.png?as=webp&width=60 1x, img/logoLI.png?as=webp&width=120 2x" 
                      alt="Logo del restaurant Little Italy" 
