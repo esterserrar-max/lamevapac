@@ -676,7 +676,33 @@ iframe {
   padding-top: 2em;
   padding-bottom: 2em;
 }
+.video-container.lazy-youtube {
+  position: relative;
+  width: 100%;
+  max-width: 560px; // Mida estàndard de YouTube
+  margin: 20px auto;
+  aspect-ratio: 16 / 9;
+  background-color: #000; // Fons negre per simular el reproductor
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
+  .play-preview-btn {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #e60000; // Vermell corporatiu de YouTube
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: #b30000;
+    }
+  }
+}
 /*------------------------*/
 /* Estil de Detail1.html */
 /*------------------------*/
