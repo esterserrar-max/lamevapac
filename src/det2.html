@@ -5,17 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>El Blog del Little Italy</title>
+    <title>El blog del Little Italy</title>
     <link rel="icon" type="image/png" href="img/favicon.png">
     <meta name="description" content="Blog del restaurant Little Italy">
-
-    <link rel="stylesheet" href="style.scss" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="./css/estils.css"></noscript>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+
+    <link rel="stylesheet" href="style.scss">
 </head>
 
 <body>
@@ -24,10 +23,8 @@
         <nav class="menu-principal" aria-label="Navegació principal">
             <a href="index.html">
                 <img src="img/logoLI.png?width=120" srcset="img/logoLI.png?as=webp&width=60 1x, 
-                 img/logoLI.png?as=webp&width=120 2x" alt="Logo del restaurant Little Italy"
-                    class="img-menu-principal"
-                    width="120"
-                    height="120">
+                 img/logoLI.png?as=webp&width=120 2x" alt="Logo del restaurant Little Italy" class="img-menu-principal"
+                    width="120" height="120">
             </a>
 
             <button class="hamburguesa" aria-label="Mostra el menú"> &#9776;</button>
@@ -44,20 +41,20 @@
         <div class="img-fons-2">
 
             <picture class="hero-detall2">
-                <!-- Desktop: Foto panoràmica -->
+                
                 <source media="(min-width: 1024px)"
                     srcset="./img/fondo-menu.jpg?width=1200&height=300&fit=cover&as=avif" type="image/avif">
                 <source media="(min-width: 1024px)"
                     srcset="./img/fondo-menu.jpg?width=1200&height=300&fit=cover&as=webp" type="image/webp">
-                <!-- Tablet: Foto més quadrada -->
+                
                 <source media="(min-width: 600px)" srcset="./img/fondo-menu.jpg?width=800&height=300&fit=cover&as=avif"
                     type="image/avif">
                 <source media="(min-width: 600px)" srcset="./img/fondo-menu.jpg?width=800&height=300&fit=cover&as=webp"
                     type="image/webp">
-                <!-- Mòbil: Foto vertical perquè es vegin bé els ingredients -->
+                
                 <source srcset="./img/fondo-menu.jpg?width=450&height=300&fit=cover&as=avif" type="image/avif">
-                <img src="./img/fondo-menu.jpg?width=450&height=300&fit=cover&as=webp"
-                    alt="" loading="eager" fetchpriority="high">
+                <img src="./img/fondo-menu.jpg?width=450&height=300&fit=cover&as=webp" alt="Ingredients frescos sobre la taula de cuina" loading="eager"
+                    fetchpriority="high" width="450" height="300" style="width: 100%; max-width: 450px; height: auto; aspect-ratio: 450 / 300;">
             </picture>
 
             <h1 class="titol-blog">El Blog <br>del <br>Little Italy</h1>
@@ -74,12 +71,9 @@
                 tindrà ingredients diferents per tal de fer-ho més divertit.
                 En el video de Youtube teniu la llista dels ingredients que necessiteu. </p>
 
-            <div class="video">
-                <iframe src="https://www.youtube.com/embed/vPqPKr3aXjM?si=YIA3Fgy1y2mNaVxh"
-                    loading="lazy"
-                    title="Recepta pizza napolitana"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            
+            <div class="video-container lazy-youtube" data-src="https://www.youtube.com/embed/vPqPKr3aXjM?si=YIA3Fgy1y2mNaVxh">
+                <button class="play-preview-btn" aria-label="Reprodueix el vídeo de la recepta">Reprodueix Vídeo</button>
             </div>
         </article>
 
@@ -108,9 +102,10 @@
                     ./img/pizzacrua.jpg?as=webp&width=1200 1200w"
                             sizes="(max-width: 600px) 400px, (max-width: 1024px) 800px, 1200px">
 
-                        <!-- Fallback -->
+                        <!-- Fallback amb control de mides fixes -->
                         <img class="blog" src="./img/pizzacrua.jpg?width=800"
-                            alt="Fotografia d'un dels nostres pizzers preparant una pizza" loading="lazy">
+                            alt="Fotografia d'un dels nostres pizzers preparant una pizza" loading="lazy"
+                            width="800" height="533" style="width: 100%; max-width: 800px; height: auto; aspect-ratio: 800 / 533;">
                     </picture>
                     <figcaption class="comentari-image">Un dels nostres pizzers preparant una pizza</figcaption>
                 </figure>
@@ -155,10 +150,10 @@
                     ./img/pizza-classica.jpg?as=webp&width=1200 1200w"
                             sizes="(max-width: 600px) 400px, (max-width: 1024px) 800px, 1200px">
 
-                        <!-- Fallback -->
+                        <!-- Fallback amb control de mides fixes -->
                         <img class="blog" src="./img/pizza-classica.jpg?width=800"
                             alt="Fotografia de dues pizzes. La Margarita a l'esquerra i a la dreta la Marinara"
-                            loading="lazy">
+                            loading="lazy" width="800" height="533" style="width: 100%; max-width: 800px; height: auto; aspect-ratio: 800 / 533;">
                     </picture>
                     <figcaption class="comentari-image">Pizzes Margarita i Marinara</figcaption>
                 </figure>
@@ -199,9 +194,10 @@
                     ./img/VerapizzaAss.png?as=webp&width=1200 1200w"
                             sizes="(max-width: 600px) 400px, (max-width: 1024px) 800px, 1200px">
 
-                        <!-- Fallback -->
+                        <!-- Fallback amb control de mides fixes -->
                         <img class="blog" src="./img/VerapizzaAss.png?width=800"
-                            alt="Fotografia del logo de la Associació Verace Pizza Napoletana" loading="lazy">
+                            alt="Fotografia del logo de la Associació Verace Pizza Napoletana" loading="lazy"
+                            width="800" height="533" style="width: 100%; max-width: 800px; height: auto; aspect-ratio: 800 / 533;">
                     </picture>
 
                     <figcaption class="comentari-image"> Logo de la Associació Verace Pizza Napoletana.</figcaption>
@@ -219,7 +215,7 @@
                     <li><a href="categoria.html">Sobre nosaltres</a></li>
                     <li><a href="categoria.html#contact">Contacte</a></li>
                 </ul>
-                
+
             </nav>
             <nav class="footer-social" aria-label="Xarxes socials">
                 <p>Xarxes socials</p>
