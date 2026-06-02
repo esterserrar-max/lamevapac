@@ -10,7 +10,9 @@
     <meta name="description" content="Carta del restaurant Little Italy">
 
     <link rel="stylesheet" href="style.scss" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="./css/estils.css"></noscript>
+    <noscript>
+        <link rel="stylesheet" href="./css/estils.css">
+    </noscript>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,7 +27,7 @@
             <a href="index.html">
                 <img src="img/logoLI.png?width=120" srcset="img/logoLI.png?as=webp&width=60 1x, 
                  img/logoLI.png?as=webp&width=120 2x" alt="Logo del restaurant Little Italy" class="img-menu-principal"
-                    width="120" height="120">
+                    width="120" height="120" style="aspect-ratio: 1 / 1;">
             </a>
 
             <button class="hamburguesa" aria-label="Mostra el menú"> &#9776;</button>
@@ -54,7 +56,8 @@
                 <!-- Mòbil: Foto vertical perquè es vegin bé els ingredients -->
                 <source srcset="./img/Lacarta.jpg?width=450&height=300&fit=cover&as=avif" type="image/avif">
                 <img src="./img/Lacarta.jpg?width=450&height=300&fit=cover&as=webp" alt="Sala interior del restauarant"
-                    loading="eager" fetchpriority="high">
+                    loading="eager" fetchpriority="high" width="450" height="300"
+                    style="width: 100%; max-width: 450px; height: auto; aspect-ratio: 450 / 300;">
             </picture>
         </div>
 
@@ -93,10 +96,7 @@
 
                                 <!-- Fallback -->
                                 <img class="img-carta" src="./img/diavola.jpg?width=800"
-                                    alt="Fotografia de la pizza Diavola" 
-                                    width="800"
-                                    height="450"
-                                    loading="lazy">
+                                    alt="Fotografia de la pizza Diavola" width="800" height="450" loading="lazy">
                             </picture>
                             <figcaption class="comentari-pizza">Pizza Diavola. Una de les pizzes més destacades de la
                                 carta.</figcaption>
@@ -336,9 +336,7 @@
 
                                 <!-- Fallback -->
                                 <img class="img-carta" src="./img/pizza-blanca.jpg?width=800"
-                                    alt="Fotografia de la pizza Quatra formatges" 
-                                    width="800"
-                                    height="450"
+                                    alt="Fotografia de la pizza Quatra formatges" width="800" height="450"
                                     loading="lazy">
                             </picture>
                             <figcaption class="comentari-pizza">Pizza Quatre formatges.</figcaption>
@@ -436,9 +434,7 @@
 
                                 <!-- Fallback -->
                                 <img class="img-carta" src="./img/tiramisu.jpg?width=800"
-                                    alt="Fotografia del postre de tiramisú de la casa" 
-                                    width="800"
-                                    height="450"
+                                    alt="Fotografia del postre de tiramisú de la casa" width="800" height="450"
                                     loading="lazy">
                             </picture>
                             <figcaption class="comentari-pizza">El tiramisú de la casa</figcaption>
