@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ca">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,7 +18,8 @@
     <link rel="stylesheet" href="style.scss">
 
     <!-- Afegim font-display=swap per evitar el bloqueig de text (FCP) -->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" media="print" onload="this.media='all'">
 </head>
 
 <body>
@@ -25,7 +27,9 @@
     <header>
         <nav class="menu-principal" aria-label="Navegació principal">
             <a href="index.html">
-                <img src="img/logoLI.png?width=120" srcset="img/logoLI.png?as=webp&width=60 1x, img/logoLI.png?as=webp&width=120 2x" alt="Logo del restaurant Little Italy" class="img-menu-principal" width="120" height="120">
+                <img src="img/logoLI.png?width=120"
+                    srcset="img/logoLI.png?as=webp&width=60 1x, img/logoLI.png?as=webp&width=120 2x"
+                    alt="Logo del restaurant Little Italy" class="img-menu-principal" width="120" height="120">
             </a>
 
             <button class="hamburguesa" aria-label="Mostra el menú"> &#9776;</button>
@@ -43,17 +47,21 @@
         <div class="img-fons">
             <picture class="hero-detall">
                 <!-- Desktop -->
-                <source media="(min-width: 1024px)" srcset="./img/restuarant-intrior.jpg?width=1200&height=700&fit=cover&as=avif" type="image/avif">
-                <source media="(min-width: 1024px)" srcset="./img/restuarant-intrior.jpg?width=1200&height=700&fit=cover&as=webp" type="image/webp">
+                <source media="(min-width: 1024px)"
+                    srcset="./img/restuarant-intrior.jpg?width=1200&height=700&fit=cover&as=avif" type="image/avif">
+                <source media="(min-width: 1024px)"
+                    srcset="./img/restuarant-intrior.jpg?width=1200&height=700&fit=cover&as=webp" type="image/webp">
                 <!-- Tablet -->
-                <source media="(min-width: 600px)" srcset="./img/restuarant-intrior.jpg?width=800&height=600&fit=cover&as=avif" type="image/avif">
-                <source media="(min-width: 600px)" srcset="./img/restuarant-intrior.jpg?width=800&height=600&fit=cover&as=webp" type="image/webp">
+                <source media="(min-width: 600px)"
+                    srcset="./img/restuarant-intrior.jpg?width=800&height=600&fit=cover&as=avif" type="image/avif">
+                <source media="(min-width: 600px)"
+                    srcset="./img/restuarant-intrior.jpg?width=800&height=600&fit=cover&as=webp" type="image/webp">
                 <!-- Mòbil -->
                 <source srcset="./img/restuarant-intrior.jpg?width=450&height=600&as=avif" type="image/avif">
                 <source srcset="./img/restuarant-intrior.jpg?width=450&height=600&fit=cover&as=webp" type="image/webp">
 
-                <img src="./img/restuarant-intrior.jpg?width=450&height=600&fit=cover&as=webp" 
-                alt="Sala interior del restaurant" width="450" height="600" loading="eager" fetchpriority="high">
+                <img src="./img/restuarant-intrior.jpg?width=450&height=600&fit=cover&as=webp"
+                    alt="Sala interior del restaurant" width="450" height="600" loading="eager" fetchpriority="high">
             </picture>
         </div>
 
@@ -62,14 +70,28 @@
 
         <section class="presentacion">
             <h2>Qui som?</h2>
-            <p>El Little Italy som un restaurant d'estil de cuina tradicional italiana. La nostra especialitat són les pizzes d'estil napolità. Els nostres vesavis van obrir el restaurant "La nostra Pizza" a l'any 1950 a la ciutat de Nàpols. La cuina la portaven les dones de la nostra família, les quals seguien les receptes familiars cautelosament. L'any 1990 vam decidir obrir una nova pizzeria a la ciutat de Barcelona. Part de la nostra familia volia viure i compartir la seva tradició culinària a Barcelona. En aquest nou restaurant es va decidir de preservar la recepta tradicional de la massa de les pizzes però obrint la ment per crear pizzes amb productes tradicionals catalans. Des d'ençà que ens preocupem per aconseguir el millor producte local i tradicional dels voltants de Barcelona, i agora també a Nàpols. Creiem que així ajudarem al planeta a no produir més contaminació i ajudar als productors locals.</p>
+            <p>El Little Italy som un restaurant d'estil de cuina tradicional italiana. La nostra especialitat són les
+                pizzes d'estil napolità. Els nostres vesavis van obrir el restaurant "La nostra Pizza" a l'any 1950 a la
+                ciutat de Nàpols. La cuina la portaven les dones de la nostra família, les quals seguien les receptes
+                familiars cautelosament. L'any 1990 vam decidir obrir una nova pizzeria a la ciutat de Barcelona. Part
+                de la nostra familia volia viure i compartir la seva tradició culinària a Barcelona. En aquest nou
+                restaurant es va decidir de preservar la recepta tradicional de la massa de les pizzes però obrint la
+                ment per crear pizzes amb productes tradicionals catalans. Des d'ençà que ens preocupem per aconseguir
+                el millor producte local i tradicional dels voltants de Barcelona, i agora també a Nàpols. Creiem que
+                així ajudarem al planeta a no produir més contaminació i ajudar als productors locals.</p>
 
             <div class="img">
                 <figure>
                     <picture>
-                        <source type="image/avif" srcset="./img/napoli.jpg?as=avif&width=360 360w, ./img/napoli.jpg?as=avif&width=720 720w" sizes="(max-width: 600px) 360px, 450px">
-                        <source type="image/webp" srcset="./img/napoli.jpg?as=webp&width=360 360w, ./img/napoli.jpg?as=webp&width=720 720w" sizes="(max-width: 600px) 360px, 450px">
-                        <img class="img-nosaltres" src="./img/napoli.jpg?width=450" alt="Castel dell’Ovo de la ciutat de Nàpols" width="450" height="253" loading="lazy" style="width: 100%; max-width: 450px; height: auto; aspect-ratio: 450 / 253;">
+                        <source type="image/avif"
+                            srcset="./img/napoli.jpg?as=avif&width=360 360w, ./img/napoli.jpg?as=avif&width=720 720w"
+                            sizes="(max-width: 600px) 360px, 450px">
+                        <source type="image/webp"
+                            srcset="./img/napoli.jpg?as=webp&width=360 360w, ./img/napoli.jpg?as=webp&width=720 720w"
+                            sizes="(max-width: 600px) 360px, 450px">
+                        <img class="img-nosaltres" src="./img/napoli.jpg?width=450"
+                            alt="Castel dell’Ovo de la ciutat de Nàpols" width="450" height="253" loading="lazy"
+                            style="width: 100%; max-width: 450px; height: auto; aspect-ratio: 450 / 253;">
                     </picture>
                     <figcaption class="comentari-img">Castel dell'Ovo, Nàpols.</figcaption>
                 </figure>
@@ -80,15 +102,22 @@
 
         <section id="portes" class="serveis">
             <h2>Serveis que oferim</h2>
-            <p>Al Little Italy oferim servei de restaurant, per emportar i a domicili. Per les comandes a domicili cobrarem 2€ per viatge.</p>
+            <p>Al Little Italy oferim servei de restaurant, per emportar i a domicili. Per les comandes a domicili
+                cobrarem 2€ per viatge.</p>
             <p>Per més informació odeu fer un cop d'ull a la <a href="det1.html">nostra carta</a>.</p>
 
             <div class="img">
                 <figure>
                     <picture>
-                        <source type="image/avif" srcset="./img/vespa.jpg?as=avif&width=360 360w, ./img/vespa.jpg?as=avif&width=720 720w" sizes="(max-width: 600px) 360px, 450px">
-                        <source type="image/webp" srcset="./img/vespa.jpg?as=webp&width=360 360w, ./img/vespa.jpg?as=webp&width=720 720w" sizes="(max-width: 600px) 360px, 450px">
-                        <img class="img-nosaltres" src="./img/vespa.jpg?width=450" alt="Vespa, és la moto italiana iconica del país" width="450" height="300" loading="lazy" style="width: 100%; max-width: 450px; height: auto; aspect-ratio: 450 / 300;">
+                        <source type="image/avif"
+                            srcset="./img/vespa.jpg?as=avif&width=360 360w, ./img/vespa.jpg?as=avif&width=720 720w"
+                            sizes="(max-width: 600px) 360px, 450px">
+                        <source type="image/webp"
+                            srcset="./img/vespa.jpg?as=webp&width=360 360w, ./img/vespa.jpg?as=webp&width=720 720w"
+                            sizes="(max-width: 600px) 360px, 450px">
+                        <img class="img-nosaltres" src="./img/vespa.jpg?width=450"
+                            alt="Vespa, és la moto italiana iconica del país" width="450" height="300" loading="lazy"
+                            style="width: 100%; max-width: 450px; height: auto; aspect-ratio: 450 / 300;">
                     </picture>
                     <figcaption class="comentari-img">Motos de la iconònica marca italiana Vespa</figcaption>
                 </figure>
@@ -111,9 +140,15 @@
             </ul>
             <div class="img">
                 <picture>
-                    <source type="image/avif" srcset="./img/horari.jpg?as=avif&width=360 360w, ./img/horari.jpg?as=avif&width=720 720w" sizes="(max-width: 600px) 360px, 450px">
-                    <source type="image/webp" srcset="./img/horari.jpg?as=webp&width=360 360w, ./img/horari.jpg?as=webp&width=720 720w" sizes="(max-width: 600px) 360px, 450px">
-                    <img class="img-nosaltres" src="./img/horari.jpg?width=450" alt="Imatge d'un rellotge penjat en una paret blanca" width="450" height="300" loading="lazy" style="width: 100%; max-width: 450px; height: auto; aspect-ratio: 450 / 300;">
+                    <source type="image/avif"
+                        srcset="./img/horari.jpg?as=avif&width=360 360w, ./img/horari.jpg?as=avif&width=720 720w"
+                        sizes="(max-width: 600px) 360px, 450px">
+                    <source type="image/webp"
+                        srcset="./img/horari.jpg?as=webp&width=360 360w, ./img/horari.jpg?as=webp&width=720 720w"
+                        sizes="(max-width: 600px) 360px, 450px">
+                    <img class="img-nosaltres" src="./img/horari.jpg?width=450"
+                        alt="Imatge d'un rellotge penjat en una paret blanca" width="450" height="300" loading="lazy"
+                        style="width: 100%; max-width: 450px; height: auto; aspect-ratio: 450 / 300;">
                 </picture>
             </div>
         </section>
@@ -130,12 +165,14 @@
             <form id="reservationForm" method="post">
                 <div class="fila">
                     <label for="name">Nom i Cognoms</label>
-                    <input type="text" id="name" placeholder="Introdueix el teu nom" required aria-describedby="nameError">
+                    <input type="text" id="name" placeholder="Introdueix el teu nom" required
+                        aria-describedby="nameError">
                     <span class="missatge-error" id="nameError" aria-live="polite"></span>
                 </div>
                 <div class="fila">
                     <label for="people">Persones</label>
-                    <input type="number" id="people" placeholder="Número de persones" required min="1" aria-describedby="numberError">
+                    <input type="number" id="people" placeholder="Número de persones" required min="1"
+                        aria-describedby="numberError">
                     <span class="missatge-error" id="numberError" aria-live="polite"></span>
                 </div>
 
@@ -160,9 +197,16 @@
             <div class="img">
                 <figure>
                     <picture>
-                        <source type="image/avif" srcset="./img/exteriorrestaurant.jpg?as=avif&width=360 360w, ./img/exteriorrestaurant.jpg?as=avif&width=720 720w" sizes="(max-width: 600px) 360px, 450px">
-                        <source type="image/webp" srcset="./img/exteriorrestaurant.jpg?as=webp&width=360 360w, ./img/exteriorrestaurant.jpg?as=webp&width=720 720w" sizes="(max-width: 600px) 360px, 450px">
-                        <img class="img-nosaltres" src="./img/exteriorrestaurant.jpg?width=450" alt="Vista de la terrassa exterior del restaurant a Barcelona" width="450" height="300" loading="lazy" style="width: 100%; max-width: 450px; height: auto; aspect-ratio: 450 / 300;">
+                        <source type="image/avif"
+                            srcset="./img/exteriorrestaurant.jpg?as=avif&width=360 360w, ./img/exteriorrestaurant.jpg?as=avif&width=720 720w"
+                            sizes="(max-width: 600px) 360px, 450px">
+                        <source type="image/webp"
+                            srcset="./img/exteriorrestaurant.jpg?as=webp&width=360 360w, ./img/exteriorrestaurant.jpg?as=webp&width=720 720w"
+                            sizes="(max-width: 600px) 360px, 450px">
+                        <img class="img-nosaltres" src="./img/exteriorrestaurant.jpg?width=450"
+                            alt="Vista de la terrassa exterior del restaurant a Barcelona" width="450" height="300"
+                            loading="lazy"
+                            style="width: 100%; max-width: 450px; height: auto; aspect-ratio: 450 / 300;">
                     </picture>
                     <figcaption class="comentari-img">Terrassa del restaurant a Barcelona</figcaption>
                 </figure>
@@ -174,13 +218,21 @@
         <section class="localització">
             <h2>On estem?</h2>
             <p>El nostre local es troba a la següent direcció:</p>
-            <p><a href="https://www.google.com/maps/place/Carrer+dels+Banys,+56,+08530+La+Garriga,+Barcelona,+Espanya/@41.6821809,2.2834171,17z/data=!3m1!4b1!4m6!3m5!1s0x12a4c5943908aa89:0x35e15d7bbb9f516c!8m2!3d41.6821769!4d2.285992!16s%2Fg%2F11crwzjkvd?entry=ttu&g_ep=EgoyMDI2MDMxMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">Carrer Banys 56, La Garriga (08530, Barcelona)</a> </p>
+            <p><a href="https://www.google.com/maps/place/Carrer+dels+Banys,+56,+08530+La+Garriga,+Barcelona,+Espanya/@41.6821809,2.2834171,17z/data=!3m1!4b1!4m6!3m5!1s0x12a4c5943908aa89:0x35e15d7bbb9f516c!8m2!3d41.6821769!4d2.285992!16s%2Fg%2F11crwzjkvd?entry=ttu&g_ep=EgoyMDI2MDMxMC4wIKXMDSoASAFQAw%3D%3D"
+                    target="_blank" rel="noopener noreferrer">Carrer Banys 56, La Garriga (08530, Barcelona)</a> </p>
 
             <div class="img">
                 <picture>
-                    <source type="image/avif" srcset="./img/onsom.jpg?as=avif&width=360 360w, ./img/onsom.jpg?as=avif&width=720 720w" sizes="(max-width: 600px) 360px, 450px">
-                    <source type="image/webp" srcset="./img/onsom.jpg?as=webp&width=360 360w, ./img/onsom.jpg?as=webp&width=720 720w" sizes="(max-width: 600px) 360px, 450px">
-                    <img class="img-nosaltres" src="./img/onsom.jpg?width=450" alt="Mà amb una xinxeta de color vermella localitzant un lloc en un mapa" width="450" height="300" loading="lazy" style="width: 100%; max-width: 450px; height: auto; aspect-ratio: 450 / 300;">
+                    <source type="image/avif"
+                        srcset="./img/onsom.jpg?as=avif&width=360 360w, ./img/onsom.jpg?as=avif&width=720 720w"
+                        sizes="(max-width: 600px) 360px, 450px">
+                    <source type="image/webp"
+                        srcset="./img/onsom.jpg?as=webp&width=360 360w, ./img/onsom.jpg?as=webp&width=720 720w"
+                        sizes="(max-width: 600px) 360px, 450px">
+                    <img class="img-nosaltres" src="./img/onsom.jpg?width=450"
+                        alt="Mà amb una xinxeta de color vermella localitzant un lloc en un mapa" width="450"
+                        height="300" loading="lazy"
+                        style="width: 100%; max-width: 450px; height: auto; aspect-ratio: 450 / 300;">
                 </picture>
             </div>
         </section>
@@ -190,13 +242,21 @@
         <section id="contact" class="contacte">
             <h2>Contacte</h2>
             <p>Telèfon: 93 871 69 32 o 610101317</p>
-            <p>Correu electrònic: <a href="mailto:exemple@email.com?subject=Consulta&body=Hola,%20voldria%20informació">littleitalyrestaurant@gmail.com</a></p>
+            <p>Correu electrònic: <a
+                    href="mailto:exemple@email.com?subject=Consulta&body=Hola,%20voldria%20informació">littleitalyrestaurant@gmail.com</a>
+            </p>
 
             <div class="img">
                 <picture>
-                    <source type="image/avif" srcset="./img/contacte.jpg?as=avif&width=360 360w, ./img/contacte.jpg?as=avif&width=720 720w" sizes="(max-width: 600px) 360px, 450px">
-                    <source type="image/webp" srcset="./img/contacte.jpg?as=webp&width=360 360w, ./img/contacte.jpg?as=webp&width=720 720w" sizes="(max-width: 600px) 360px, 450px">
-                    <img class="img-nosaltres" src="./img/contacte.jpg?width=450" alt="Imatge d'un telèfon antic de color negre" width="450" height="300" loading="lazy" style="width: 100%; max-width: 450px; height: auto; aspect-ratio: 450 / 300;">
+                    <source type="image/avif"
+                        srcset="./img/contacte.jpg?as=avif&width=360 360w, ./img/contacte.jpg?as=avif&width=720 720w"
+                        sizes="(max-width: 600px) 360px, 450px">
+                    <source type="image/webp"
+                        srcset="./img/contacte.jpg?as=webp&width=360 360w, ./img/contacte.jpg?as=webp&width=720 720w"
+                        sizes="(max-width: 600px) 360px, 450px">
+                    <img class="img-nosaltres" src="./img/contacte.jpg?width=450"
+                        alt="Imatge d'un telèfon antic de color negre" width="450" height="300" loading="lazy"
+                        style="width: 100%; max-width: 450px; height: auto; aspect-ratio: 450 / 300;">
                 </picture>
             </div>
         </section>
@@ -205,17 +265,19 @@
 
         <section class="consell">
             <h2>Pels clients curiosos</h2>
-            <p>Si mai aneu a Nàpols, us recomenem mirar el següent vídeo. Aquí trobareu diferents llocs on provar menjar tradicional a la ciutat de Nàpols.</p>
-            <p>Si us agrada fer receptes, en el <a href="det2.html#recepta-mensual"> Blog del Little Italay</a> trobareu receptes mensuals.</p>
+            <p>Si mai aneu a Nàpols, us recomenem mirar el següent vídeo. Aquí trobareu diferents llocs on provar menjar
+                tradicional a la ciutat de Nàpols.</p>
+            <p>Si us agrada fer receptes, en el <a href="det2.html#recepta-mensual"> Blog del Little Italy</a> trobareu
+                receptes mensuals.</p>
 
-            <!-- TRUC MESTRE DE PERFORMANCE: El iframe no té SRC inicial, evitant la descàrrega de JavaScript de YouTube bloquejant -->
-            <div class="video" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: #000;">
-                <iframe id="lazy-video" data-src="https://www.youtube-nocookie.com/embed/uTFYGK5nkcs?si=2ImaaCEe3QlAe8lq" 
-                    title="Punts de menjar tradicions de Nàpols" 
-                    style=" width: 100%; height: 100%; border: 0; display: block;"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    referrerpolicy="strict-origin-when-cross-origin" 
-                    allowfullscreen></iframe>
+            <div class="video"
+                style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: #000;">
+                <iframe id="lazy-video"
+                    data-src="https://www.youtube-nocookie.com/embed/uTFYGK5nkcs?si=2ImaaCEe3QlAe8lq"
+                    title="Punts de menjar tradicions de Nàpols"
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; display: block;"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </section>
 
@@ -249,11 +311,11 @@
         </div>
     </footer>
 
-   <!-- Evita que YouTube carregui fins que l'usuari hi arriba fent scroll -->
+    <!-- Evita que YouTube carregui fins que l'usuari hi arriba fent scroll -->
     <script>
         window.addEventListener('DOMContentLoaded', () => {
             const videoElement = document.getElementById('lazy-video');
-            
+
             if ('IntersectionObserver' in window && videoElement) {
                 const videoObserver = new IntersectionObserver((entries, observer) => {
                     entries.forEach((entry) => {
@@ -270,7 +332,7 @@
                 }, {
                     rootMargin: "0px 0px 300px 0px" // Comença a carregar-lo 300px abans que l'usuari hi arribi fent scroll
                 });
-                
+
                 videoObserver.observe(videoElement);
             } else if (videoElement) {
                 // Alternativa de seguretat per navegadors molt antics
@@ -280,7 +342,9 @@
     </script>
     <script type="module" src="app.js" defer></script>
 </body>
+
 </html>
-    <script type="module" src="app.js" defer></script>
+<script type="module" src="app.js" defer></script>
 </body>
+
 </html>
