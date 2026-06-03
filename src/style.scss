@@ -663,10 +663,10 @@ input:valid {
 }
 
 /* ==========================================================================
-   BLOC UNIFICAT DE VÍDEOS DE YOUTUBE (Evita desajustos entre pàgines)
+   BLOC UNIFICAT DE VÍDEOS DE YOUTUBE 
    ========================================================================== */
 
-// 1. Solució per a la classe .video (Càrrega automàtica per scroll)
+
 .video {
   position: relative !important;
   width: 100% !important;
@@ -688,7 +688,6 @@ input:valid {
   }
 }
 
-// 2. Solució per a la classe .video-container (Càrrega per clic de botó del Blog)
 .video-container.lazy-youtube {
   position: relative !important;
   width: 100% !important;
@@ -908,11 +907,18 @@ details[open] .fletxa {
 .img-fons-2{
  position: relative; /* Crea el marc de referència */
   width: 100%;
-  height: 300px; /* Alçada per a mòbil */
+  height: auto; /* Alçada per a mòbil */
   overflow: hidden;
 
+  aspect-ratio: 450 / 300 !important;
+
+  @media (min-width: 600px) {
+    aspect-ratio: 800 / 300 !important;
+  }
+
+  // Proporció per a ORDINADORS (Més panoràmica i estreta)
   @media (min-width: 1024px) {
-    height: 300px; /* Alçada per a desktop */
+    aspect-ratio: 1200 / 300 !important;
   }
 }
 
@@ -933,7 +939,7 @@ details[open] .fletxa {
   color: white;
   text-align: center;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-  padding-top: 2em;
+  padding-top: 1em;
 }
 
 /* Estil seccio introducció*/
@@ -1176,6 +1182,9 @@ details[open] .fletxa {
   .linia-movil {
     gap: 3em;
   }
+  .titol-blog{
+    padding-top: 1.7em;
+  }
 }
 
 /* Smartphone grande */
@@ -1302,6 +1311,7 @@ details[open] .fletxa {
   /*Títols h1 de detail2 i enllacos*/
   .titol-blog {
     font-size: 2.3em;
+    padding-top: 1em;
   }
 
   .titol-enllac {
@@ -1492,7 +1502,11 @@ details[open] .fletxa {
     min-height: 70vh;
     background-position: center top;
   }
-
+  /*Titol del blog*/
+  .titol-blog{
+    padding-top: 0.5em;
+  }
+  
   /* Titol de Enllacos.html*/
   .titol-enllac {
     padding-top: 1.5em;
